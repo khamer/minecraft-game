@@ -1,0 +1,6 @@
+node_modules/
+public/dist/
+public/textures/
+.superpowers/
+dist/
+*.local
