@@ -1,0 +1,438 @@
+<html lang="en"><head><meta charset="UTF-8"><title>Example.com</title><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/tokyo-night-dark.min.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg width='256' height='256' viewBox='0 0 256 256' fill='none' xmlns='http://www.w3.org/2000/svg'><rect width='256' height='256' rx='20.48' fill='%23850080'/><rect x='80.0509' y='46' width='19.2941' height='164' fill='%23ffffff'/><path d='M99.345 140.222V46H139.19C154.347 46 165.91 50.1408 173.879 58.4223C181.848 66.7038 185.832 78.2667 185.832 93.1109C185.832 107.955 181.848 119.518 173.879 127.8C165.91 136.081 154.347 140.222 139.19 140.222H99.345ZM99.345 123.112H138.721C147.003 123.112 153.409 121.081 157.941 117.018C162.628 112.799 164.972 106.861 164.972 99.2049V87.017C164.972 79.3605 162.628 73.5009 157.941 69.4383C153.409 65.2194 147.003 63.1099 138.721 63.1099H99.345V123.112Z' fill='url(%23paint0_linear_5502_40)'/><defs><linearGradient id='paint0_linear_5502_40' x1='108.389' y1='71.3235' x2='81.2567' y2='140.059' gradientUnits='userSpaceOnUse'><stop stop-color='%23ffffff'/><stop offset='1' stop-color='%23ffffff' stop-opacity='0'/></linearGradient></defs></svg>"><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"><script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script><style>
+    @view-transition {
+        navigation: auto;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+      margin: 0;
+    }
+    a:not(:hover) {
+      text-decoration: none;
+    }
+    #root {
+      background: conic-gradient(#0002 90deg, #0000 90deg 180deg, #0002 180deg 270deg, #0000 270deg) #444 top / 2em 2em;
+      display: grid;
+      grid: "aside main" auto "aside main" 1fr / 200px 1fr;
+      height: 100%;
+
+      &:has(.hide-code :checked) {
+        grid-template-rows: 1fr auto;
+
+        .preview {
+          height: auto;
+        }
+      }
+    }
+    aside {
+      background: #2c2c2c;
+      color: #fff;
+      display: flex;
+      flex-flow: column;
+      font-size: 14px;
+      grid-row: aside;
+      line-height: 1.5;
+      max-height: 100vh;
+      overflow: scroll;
+
+      summary {
+        cursor: pointer;
+        list-style: none;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+      }
+      
+      h1 {
+        font-size: 16px;
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 0;
+
+        svg, img {
+          max-width: 100%;
+          max-height: 1rem;
+        }
+      }
+
+      a {
+        color: #fff;
+
+        &:visited {
+          color: #ccc;
+        }
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      summary,
+      summary > a,
+      li > a {
+        display: flex;
+        gap: .25em;
+      }
+      
+      summary,
+      li > a {
+        border-radius: 5px;
+        margin: 0 10px 4px 4px;
+        padding: .25em .5em;
+        transition: all 150ms cubic-bezier(0.22, 1, 0.36, 1);
+        user-select: none;
+
+        &.active,
+        &:hover {
+          background: #fff1;
+          color: #fff;
+        }
+        
+        ul ul & { padding-left: 2em; }
+        ul ul ul & { padding-left: 3em; }
+        ul ul ul ul & { padding-left: 4em; }
+        ul ul ul ul ul & { padding-left: 5em; }
+      }
+      
+      summary::after {
+        opacity: .75;
+        content: '⏵';
+        margin-left: auto;
+      }
+      
+      details[open] > summary::after {
+        content: '⏷';
+        opacity: .25;
+      }
+
+      .version {
+        align-self: center;
+        font-variant-numeric: lining-nums;
+        margin-top: auto;
+        opacity: .5;
+        padding: 1em;
+      }
+    }
+    .documentation {
+      background: #fff;
+      font-family: Merriweather, Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+      grid-area: main;
+      line-height: 1.75;
+      color: #000b;
+      padding: 2rem max(clamp(2rem, 5vw, 5rem), 100% - 960px - 5rem) 2rem clamp(2rem, 5vw, 5rem);
+      overflow-x: scroll;
+
+      h1 { font-size: 4rem }
+      h2 { font-size: 2rem }
+      h3 { font-size: 1.6875rem }
+      h4 { font-size: 1.375rem }
+      h5 { font-size: 1.1875rem }
+      h6 { font-size: 1rem }
+
+      h1, h2, h3, h4, h5, h6 {
+        color: #000;
+        margin: 0 0 1rem;
+      }
+
+      ul, ol, p, pre, table {
+        margin: 0 0 2rem;
+      }
+    }
+    .showcase {
+      background: #fff;
+      height: 100vh;
+      overflow: auto;
+      
+      .components {
+        display: grid;
+        grid: auto / repeat(auto-fill, minmax(20rem, 1fr));
+        gap: 3rem;
+        padding: 0 1rem;
+        
+        h2 {
+          grid-column: 1 / -1;
+        }
+      }
+      
+      .example {
+        max-height: 20rem;
+        overflow: hidden;
+        display: grid;
+
+        .example-link,
+        .example__pane {
+          grid-area: 1 / 1;
+        }
+
+        .example__pane {
+          width: 100vw;
+          pointer-events: none;
+        }
+      }
+      
+      iframe {
+        border: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .preview {
+      background: #fff;
+      border: 3px ridge;
+      height: 50vh;
+      justify-self: center;
+      margin: .5em 0;
+      max-width: calc(100vw - 200px);
+      overflow: auto;
+      position: relative;
+      resize: both;
+      width: min(100% - 32px, 1364px);
+
+      iframe {
+        border: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .fullscreen,
+    .hide-code {
+      position: absolute;
+      opacity: .5;
+     
+      color: black;
+      font-weight: bold;
+      padding: 0 .25em;
+      right: 0;
+      user-select: none;
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
+
+    .hide-code {
+      right: 1em;
+      input { display: none; }
+    }
+
+    .files {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0 .25em;
+      container-type: size;
+      position: relative;
+
+      > div {
+        display: contents;
+      }
+
+      > div > a {
+        padding: .25em .5em;
+        background: #555;
+        border-radius: .5em .5em 0 0;
+        color: #fff;
+        order: -1;
+
+        &:hover {
+          background: color-mix(in srgb, #555, #1a1b26);
+          text-decoration: none;
+        }
+      }
+
+      a:target {
+        background: #1a1b26;
+
+        + .file {
+          display: grid;
+        }
+      }
+
+      &:not(:has(:target)) {
+        > div:first-child > a {
+          background: #1a1b26;
+
+          + .file {
+            display: grid;
+          }
+        }
+      }
+
+      .file {
+        display: none;
+        width: 100%;
+        height: calc(100cqh - 1.75rem);
+        overflow: scroll;
+      }
+
+      pre {
+        margin: 0;
+        code {
+          min-height: 100%;
+          padding-top: 2em;
+        }
+      }
+    }
+    </style></head><body><div id="root"><aside><h1><a href="/components">Example.com</a></h1><ul><!--[--><li><details open><summary><a href="/components/styles" class="">styles</a></summary><ul><!--[--><li><details open><summary><a href="/components/styles/atoms" class="">atoms</a></summary><ul><!--[--><li><a href="/components/styles/atoms/breadcrumbs" class="html">breadcrumbs</a></li><li><details open><summary><a href="/components/styles/atoms/button" class="html">button</a></summary><ul><!--[--><li><a href="/components/styles/atoms/button/button--icon" class="html">button--icon</a></li><li><a href="/components/styles/atoms/button/button--messaging" class="html">button--messaging</a></li><li><a href="/components/styles/atoms/button/button-on-primary" class="html">button-on-primary</a></li><!--]--></ul></details></li><li><a href="/components/styles/atoms/checkbox" class="html">checkbox</a></li><li><a href="/components/styles/atoms/dropdown" class="html">dropdown</a></li><li><a href="/components/styles/atoms/eyebrow" class="html">eyebrow</a></li><li><a href="/components/styles/atoms/heading" class="html">heading</a></li><li><a href="/components/styles/atoms/icon" class="html">icon</a></li><li><a href="/components/styles/atoms/input" class="html">input</a></li><li><a href="/components/styles/atoms/link" class="html">link</a></li><li><details open><summary><a href="/components/styles/atoms/media" class="html">media</a></summary><ul><!--[--><li><a href="/components/styles/atoms/media/media-PWistia" class="html">media-PWistia</a></li><li><a href="/components/styles/atoms/media/media-PYouTube" class="html">media-PYouTube</a></li><li><a href="/components/styles/atoms/media/media-PYouTubePlaylist" class="html">media-PYouTubePlaylist</a></li><!--]--></ul></details></li><li><a href="/components/styles/atoms/radio" class="html">radio</a></li><li><a href="/components/styles/atoms/search" class="html">search</a></li><li><a href="/components/styles/atoms/select" class="html">select</a></li><li><a href="/components/styles/atoms/switch" class="html">switch</a></li><li><a href="/components/styles/atoms/tag" class="html">tag</a></li><!--]--></ul></details></li><li><details open><summary><a href="/components/styles/core" class="">core</a></summary><ul><!--[--><li><a href="/components/styles/core/Fluid-Typgraphy" class="md">Fluid-Typgraphy</a></li><li><a href="/components/styles/core/Properties" class="md">Properties</a></li><li><details open><summary><a href="/components/styles/core/utilities" class="">utilities</a></summary><ul><!--[--><li><a href="/components/styles/core/utilities/container" class="html">container</a></li><li><a href="/components/styles/core/utilities/directionalKeys" class="html">directionalKeys</a></li><li><a href="/components/styles/core/utilities/grid" class="html">grid</a></li><li><a href="/components/styles/core/utilities/srOnly" class="html">srOnly</a></li><!--]--></ul></details></li><!--]--></ul></details></li><li><details open><summary><a href="/components/styles/molecules" class="">molecules</a></summary><ul><!--[--><li><a href="/components/styles/molecules/accordion" class="html">accordion</a></li><li><a href="/components/styles/molecules/actions" class="html">actions</a></li><li><a href="/components/styles/molecules/banner" class="html">banner</a></li><li><details open><summary><a href="/components/styles/molecules/card" class="html">card</a></summary><ul><!--[--><li><a href="/components/styles/molecules/card/card--condensed" class="html">card--condensed</a></li><li><a href="/components/styles/molecules/card/card--flipped" class="html">card--flipped</a></li><li><a href="/components/styles/molecules/card/card--icon" class="html">card--icon</a></li><li><a href="/components/styles/molecules/card/card--tags" class="html">card--tags</a></li><!--]--></ul></details></li><li><a href="/components/styles/molecules/checklist" class="html">checklist</a></li><li><a href="/components/styles/molecules/featureVideo" class="html">featureVideo</a></li><li><a href="/components/styles/molecules/field" class="html">field</a></li><li><a href="/components/styles/molecules/list" class="html">list</a></li><li><a href="/components/styles/molecules/logoGrid" class="html">logoGrid</a></li><li><a href="/components/styles/molecules/mobileNavigation" class="html">mobileNavigation</a></li><li><details open><summary><a href="/components/styles/molecules/navigation" class="html">navigation</a></summary><ul><!--[--><li><a href="/components/styles/molecules/navigation/navigation-hoverable" class="html">navigation-hoverable</a></li><!--]--></ul></details></li><li><a href="/components/styles/molecules/pagination" class="html">pagination</a></li><li><a href="/components/styles/molecules/sitemap" class="html">sitemap</a></li><li><details open><summary><a href="/components/styles/molecules/tabs" class="html">tabs</a></summary><ul><!--[--><li><a href="/components/styles/molecules/tabs/tabs--solid" class="html">tabs--solid</a></li><li><a href="/components/styles/molecules/tabs/tabs--vertical" class="html">tabs--vertical</a></li><!--]--></ul></details></li><li><details open><summary><a href="/components/styles/molecules/testimonial" class="html">testimonial</a></summary><ul><!--[--><li><a href="/components/styles/molecules/testimonial/testimonial--aside" class="html">testimonial--aside</a></li><li><a href="/components/styles/molecules/testimonial/testimonial--featured" class="html">testimonial--featured</a></li><!--]--></ul></details></li><!--]--></ul></details></li><li><details open><summary><a href="/components/styles/organisms" class="">organisms</a></summary><ul><!--[--><li><details open><summary><a href="/components/styles/organisms/basicSection" class="html">basicSection</a></summary><ul><!--[--><li><a href="/components/styles/organisms/basicSection/oneColumn" class="html">oneColumn</a></li><!--]--></ul></details></li><li><details open><summary><a href="/components/styles/organisms/callout" class="html">callout</a></summary><ul><!--[--><li><a href="/components/styles/organisms/callout/callout--split" class="html">callout--split</a></li><!--]--></ul></details></li><li><a href="/components/styles/organisms/dialog" class="html">dialog</a></li><li><a href="/components/styles/organisms/featuredTestimonials" class="html">featuredTestimonials</a></li><li><a href="/components/styles/organisms/form" class="html">form</a></li><li><details open><summary><a href="/components/styles/organisms/hero" class="html">hero</a></summary><ul><!--[--><li><a href="/components/styles/organisms/hero/hero--gradients" class="html">hero--gradients</a></li><!--]--></ul></details></li><li><a href="/components/styles/organisms/logoCloud" class="html">logoCloud</a></li><li><a href="/components/styles/organisms/mediaBanner" class="html">mediaBanner</a></li><li><details open><summary><a href="/components/styles/organisms/message" class="html">message</a></summary><ul><!--[--><li><a href="/components/styles/organisms/message/message--dark" class="html">message--dark</a></li><!--]--></ul></details></li><li><a href="/components/styles/organisms/richText" class="html">richText</a></li><li><a href="/components/styles/organisms/section" class="html">section</a></li><li><a href="/components/styles/organisms/siteFooter" class="html">siteFooter</a></li><li><a href="/components/styles/organisms/siteHeader" class="html">siteHeader</a></li><li><a href="/components/styles/organisms/slider" class="html">slider</a></li><li><a href="/components/styles/organisms/stats" class="html">stats</a></li><li><details open><summary><a href="/components/styles/organisms/table" class="html">table</a></summary><ul><!--[--><li><a href="/components/styles/organisms/table/table--scrollable" class="html">table--scrollable</a></li><!--]--></ul></details></li><li><a href="/components/styles/organisms/testimonialSlider" class="html">testimonialSlider</a></li><!--]--></ul></details></li><li><details open><summary><a href="/components/styles/utilities" class="">utilities</a></summary><ul><!--[--><li><a href="/components/styles/utilities/colors" class="html">colors</a></li><!--]--></ul></details></li><!--]--></ul></details></li><!--]--></ul><div class="version">1.0.0</div></aside><!----><!--[--><main class="preview" id="app"><a class="fullscreen" href="/components/styles/molecules/card/card--tags/@html" title="Open example fullscreen">⛶</a><label class="hide-code" title="Toggle bottom code panel"><input type="checkbox">⬒</label><iframe src="/components/styles/molecules/card/card--tags/@html"></iframe></main><div class="files"><!--[--><div><a href="#" id="card--tagshtml">card--tags.html</a><div class="file"><pre><code>&#x3C;h2&#x3E;Card Tags&#x3C;/h2&#x3E;
+&#x3C;div class=&#x22;card&#x22; style=&#x22;max-width: 25.75rem&#x22;&#x3E;
+  &#x3C;div class=&#x22;card__content&#x22;&#x3E;
+    &#x3C;ul class=&#x22;card__tagList&#x22;&#x3E;
+      &#x3C;li class=&#x22;card__tagListItem&#x22;&#x3E;
+        &#x3C;p class=&#x22;tag&#x22;&#x3E;
+          &#x3C;svg class=&#x22;tag__icon&#x22;&#x3E;
+            &#x3C;use href=&#x22;/main-icons-sprite.svg#tag&#x22; /&#x3E;
+          &#x3C;/svg&#x3E;
+          Simple Tag
+        &#x3C;/p&#x3E;
+      &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;card__tagListItem&#x22;&#x3E;
+        &#x3C;p class=&#x22;tag&#x22;&#x3E;
+          &#x3C;svg class=&#x22;tag__icon&#x22;&#x3E;
+            &#x3C;use href=&#x22;/main-icons-sprite.svg#tag&#x22; /&#x3E;
+          &#x3C;/svg&#x3E;
+          Simple Tag
+        &#x3C;/p&#x3E;
+      &#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+    &#x3C;span class=&#x22;card__title h3&#x22;&#x3E; Title of card that will fall to two lines &#x3C;/span&#x3E;
+    &#x3C;p class=&#x22;card__meta&#x22;&#x3E;Posted Aug 12, 2023 by &#x3C;a href=&#x22;#&#x22; class=&#x22;card__metaLink&#x22;&#x3E;Daphne Writesposts&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+    &#x3C;p class=&#x22;card__meta&#x22;&#x3E;
+      &#x3C;svg class=&#x22;card__metaIcon&#x22;&#x3E;
+        &#x3C;use href=&#x22;/main-icons-sprite.svg#clock&#x22; /&#x3E;
+      &#x3C;/svg&#x3E;
+      15 Minute Read
+    &#x3C;/p&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;card__imageWrapper&#x22;&#x3E;
+    &#x3C;img src=&#x22;https://panoramicireland.com/media/k2/items/cache/cb9c495b17bc28a44ffb50c55572ed63_XL.jpg&#x22; alt=&#x22;&#x22; class=&#x22;card__image&#x22; /&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code></pre></div></div><div><a href="#indexscss" id="indexscss">index.scss</a><div class="file"><pre><code>@use &#x27;@/core&#x27; as *;
+
+.card {
+  $b: &#x26;;
+
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  overflow: hidden;
+  max-width: 100%;
+
+  &#x26;__imageWrapper {
+    aspect-ratio: 1.78;
+    overflow: hidden;
+  }
+
+  &#x26;__image {
+    @include image-fit(cover);
+  }
+
+  &#x26;__tagList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  &#x26;__cta {
+    margin-top: 0;
+    display: flex;
+    width: 100%;
+    font-weight: 700;
+  }
+
+  &#x26;__meta {
+    color: var(--color-gray-500);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &#x26;__metaLink {
+    text-underline-offset: 4px;
+    font-weight: 700;
+  }
+
+  &#x26;__metaIcon {
+    display: inline-block;
+    height: 1.25em;
+    width: 1.25em;
+    margin-right: 0.5em;
+    aspect-ratio: 1;
+    vertical-align: text-bottom;
+  }
+
+  .tag {
+    margin: 0;
+  }
+
+  &#x26;__title {
+    font-size: fluid-rems(1.5, 2);
+    margin: 0.5rem 0;
+  }
+
+  &#x26;__description {
+    color: var(--color-gray-600);
+    line-height: 2;
+    margin: 0;
+  }
+
+  &#x26;__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  &#x26;__iconWrapper {
+    block-size: 6rem;
+    aspect-ratio: 1;
+  }
+
+  &#x26;__icon {
+    height: 100%;
+  }
+
+  &#x26;.-condensed {
+    #{$b}__description {
+      line-height: 1.5;
+    }
+  }
+
+  &#x26;.-flipped {
+    flex-direction: column;
+  }
+}
+</code></pre></div></div><!--]--></div><!--]--></div><script>
+      hljs.highlightAll()
+      const path = location.pathname.replace(/\/$/, '')
+      document.querySelector(`aside a[href^="${path}" i]`).classList.add('active')
+
+      const detailsState = sessionStorage.getItem('detailsState')?.split(',').map(v => parseInt(v)) || [ 1 ]
+      const details = [...document.querySelectorAll('aside details')]
+
+      const toggle = ({ target }) => {
+        detailsState[details.indexOf(target)] = target.open ? 1 : 0
+        sessionStorage.setItem('detailsState', detailsState.join())
+      }
+
+      details.forEach((e, i) => {
+        e.open = detailsState?.[i]
+        e.addEventListener('toggle', toggle)
+      })
+
+      const hideCodeEl = document.querySelector('.hide-code input')
+      if (hideCodeEl) {
+        hideCodeEl.checked = sessionStorage.getItem('hideCode') === 'true'
+        hideCodeEl.addEventListener('change', evt => sessionStorage.setItem('hideCode', evt.target.checked))
+      }
+    </script></body></html>

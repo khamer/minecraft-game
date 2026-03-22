@@ -1,0 +1,28 @@
+<div class="featureVideo accent-primary">
+  <div class="featureVideo__media">
+    <div class="media">
+      <p-lazy>
+        <video class="media__content" controls playsinline>
+          <source data-src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <template #placeholder="{ load, modifier }">
+          <picture class="media__mask" :class="modifier">
+            <img srcset="https://unsplash.it/960/540?random&gravity=center" alt="Video thumbnail" />
+          </picture>
+          <button class="media__trigger" @click="load" :class="modifier">
+            <span class="srOnly" aria-label="Play video">play</span>
+            <svg class="media__icon icon -circle" viewBox="0 0 96 96">
+              <use href="/main-icons-sprite.svg#play" />
+            </svg>
+          </button>
+        </template>
+      </p-lazy>
+    </div>
+  </div>
+  <div class="featureVideo__background"></div>
+  <div class="featureVideo__content">
+    <h3 class="featureVideo__title h3">Heading Placeholder</h3>
+    <p class="featureVideo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit neque a cursus tristique. Phasellus eleifend consectetur felis, in eleifend nulla vulputate eget.</p>
+  </div>
+</div>

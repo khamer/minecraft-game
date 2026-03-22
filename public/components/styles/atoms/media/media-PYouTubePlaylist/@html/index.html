@@ -1,0 +1,32 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>media-PYouTubePlaylist</title>
+    <!-- Using Vitrine's builtin template -->
+  </head>
+  <body>
+    <div id="app">
+      <div class="media">
+  <p-you-tube-playlist>
+    <template #placeholder="{ playPause, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <source srcset="https://unsplash.it/300/150?random&gravity=center" media="(min-width: 768px)" />
+        <source srcset="https://unsplash.it/267/150?random&gravity=center" media="(min-width: 480px)" />
+        <img class="lazyload" srcset="https://unsplash.it/267/150?random&gravity=center" alt="" width="267" height="150" />
+      </picture>
+      <button class="media__trigger" :class="modifier" @click="playPause">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+    <iframe width="267" height="150" src="https://www.youtube.com/embed/videoseries?list=PLDA8A802CB81B6868" title="Embedded YouTube playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen tabindex="-1"></iframe>
+  </p-you-tube-playlist>
+</div>
+
+    </div>
+    <link rel="stylesheet" href="/resources/styles/index.scss">
+<script type="module" src="/resources/js/index.js"></script>
+  </body>
+  </html>

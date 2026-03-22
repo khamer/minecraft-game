@@ -1,0 +1,26 @@
+@use '@/core' as *;
+
+.logoCloud {
+  $b: &;
+
+  .container {
+    padding-bottom: 2rem;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &.-reduced {
+    .logoGrid__item {
+      height: fluid-rems(2, 3);
+    }
+  }
+
+  &.-center {
+    #{$b}__title,
+    #{$b}__description {
+      text-align: center;
+    }
+  }
+}

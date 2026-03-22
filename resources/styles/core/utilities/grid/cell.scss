@@ -1,0 +1,43 @@
+.cell {
+  --cell-span: clamp(1, round(var(--span, 1) * 3), var(--columns));
+
+  grid-column: span var(--cell-span);
+
+  &.-left {
+    grid-column: main / span var(--cell-span);
+  }
+
+  &.-right {
+    grid-column: span var(--cell-span) / main;
+  }
+
+  &.-center {
+    grid-column: round(down, 1 + (var(--columns, 1) - var(--cell-span)) / 2, 1) / span calc(var(--cell-span) + mod(var(--columns) - var(--cell-span), 2));
+
+    :where(.container) > & {
+      grid-column-start: round(down, 2 + (var(--columns, 1) - var(--cell-span)) / 2, 1);
+    }
+  }
+
+  &.-prioritize {
+    order: -1;
+
+    @media (width >= 808px) {
+      order: unset;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    &.-span-#{$i} {
+      --span: #{$i};
+    }
+  }
+
+  @media (width >= 368px) {
+    --cell-span: clamp(1, round(var(--span, 1) * 1.5), var(--columns));
+  }
+
+  @media (width >= 808px) {
+    --cell-span: var(--span, 1);
+  }
+}

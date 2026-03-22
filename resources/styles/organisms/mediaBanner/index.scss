@@ -1,0 +1,175 @@
+.mediaBanner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: 'media';
+
+  --media-banner-aspect-ratio: 65 / 24;
+
+  // Container instance - grid and border radius
+  &__container {
+    display: grid;
+    grid-template-areas: 'media';
+    border-radius: var(--root-border-radius);
+  }
+
+  // When inside container, position within container's grid
+  .container > &__container {
+    grid-column: main / main;
+  }
+
+  // Target p-lazy wrapper div to be in grid area (works for both full-width and container)
+  > div:first-child,
+  &__container > div:first-child {
+    grid-area: media;
+    position: relative;
+    width: 100%;
+
+    video {
+      width: 100%;
+      height: auto;
+      aspect-ratio: var(--media-banner-aspect-ratio);
+      display: block;
+    }
+  }
+
+  // Media class (works for both full-width and container)
+  .media,
+  &__container .media {
+    grid-area: media;
+    display: grid;
+    width: 100%;
+    margin-bottom: 0;
+    aspect-ratio: var(--media-banner-aspect-ratio);
+
+    // Override section's --accent-color: #fff to use default purple for icons
+    --accent-color: var(--color-purple);
+  }
+
+  &__content {
+    grid-area: media;
+    width: 100%;
+    height: auto;
+    aspect-ratio: var(--media-banner-aspect-ratio);
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+
+    // Content overlay styling (when used for text content)
+    &.-white {
+      grid-area: media;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+      color: white;
+      z-index: 2;
+      background: none;
+      object-fit: initial;
+
+      // Ensure all child elements inherit white color
+      * {
+        color: inherit;
+      }
+
+      // Don't override container - let it work with Pronto grid system
+      .container {
+        // Only add minimal styles that don't break the grid
+        width: 100%;
+        row-gap: 0;
+      }
+
+      // Text alignment modifiers
+      &.-center {
+        align-items: center;
+        text-align: center;
+      }
+
+      &.-left {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      &.-right {
+        align-items: flex-end;
+        text-align: right;
+      }
+    }
+  }
+
+  &__eyebrow {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 0.3);
+  }
+
+  &__actions {
+    margin-top: 1rem;
+  }
+
+  &__mask {
+    .media & {
+      grid-area: 1 / 1;
+    }
+
+    grid-area: media;
+    position: relative;
+    z-index: 1;
+    background: white;
+    margin: 0;
+    transition: opacity 0.3s ease;
+    border-radius: var(--root-border-radius);
+
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: var(--media-banner-aspect-ratio);
+      object-fit: cover;
+    }
+
+    &.-loaded {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__trigger {
+    // When inside media class, use media's grid system (media__trigger handles positioning)
+    .media & {
+      grid-area: 1 / 1;
+      place-self: center center;
+      z-index: 2; // Above the mask (z-index: 1)
+      position: relative;
+    }
+
+    appearance: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  &__overlay {
+    grid-area: media;
+    background-color: rgb(0 0 0 / 0.3);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // Modifier for different overlay styles
+  &.-withOverlay {
+    .mediaBanner__overlay {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>dropdown</title>
+    <!-- Using Vitrine's builtin template -->
+  </head>
+  <body>
+    <div id="app">
+      <p-openable class="link" label="Default Dropdown" :close-on-blur="false">
+  <template #toggle>
+    Dropdown
+    <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#chevron-down" /></svg>
+  </template>
+  <template id="default">
+    <div class="dropdown" v-directionals>
+      <ul class="dropdown__list">
+        <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+        <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+        <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+        <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+      </ul>
+    </div>
+  </template>
+</p-openable>
+
+    </div>
+    <link rel="stylesheet" href="/resources/styles/index.scss">
+<script type="module" src="/resources/js/index.js"></script>
+  </body>
+  </html>

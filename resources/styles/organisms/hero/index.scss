@@ -1,0 +1,200 @@
+@use '@/core' as *;
+
+.hero {
+  $b: &;
+
+  background: var(--accent-color);
+  color: var(--accent-color-contrast);
+  position: relative;
+  z-index: 0;
+
+  &__grid {
+    --columns: 1;
+    --gap: var(--root-gap, 16px);
+    --container-width: 320px;
+
+    display: grid;
+    gap: var(--gap);
+    grid: auto / [wide-start] 1fr [main-start] repeat(var(--columns), minmax(0, calc((var(--container-width) - (var(--columns) - 1) * var(--gap)) / var(--columns)))) [main-end] 1fr [wide-end];
+
+    > .container {
+      grid-column: wide / wide;
+    }
+
+    /* should be max mobile columns + tablet outer gutters */
+    @media (width >= 368px) {
+      --container-width: 744px;
+    }
+
+    /* should be max tablet columns + desktop outer gutters */
+    @media (width >= 808px) {
+      --container-width: 1300px;
+    }
+  }
+
+  &__bg {
+    container-type: size;
+    display: grid;
+    grid-area: 1 / wide / 2;
+    overflow: hidden;
+
+    > *,
+    &::before,
+    &::after {
+      grid-area: 1 / 1;
+    }
+
+    + .container {
+      grid-row: 1 / 2;
+    }
+
+    img {
+      max-height: 100cqh;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &.-fade::after {
+      background: radial-gradient(circle farthest-side at 50% 25%, #00000000 35vw, #00000022 45vw, #00000044);
+      content: '';
+      z-index: 1;
+
+      @include at(md) {
+        background: radial-gradient(circle farthest-side at calc(50vw + min(25vw, 325px)), #00000044 min(15vw, 195px), #00000088 min(25vw, 325px), #000000cc);
+      }
+    }
+
+    &.-vignette::after {
+      background: radial-gradient(ellipse closest-side at 50% 35%, #00000022 40vw, #00000044);
+      content: '';
+      z-index: 1;
+
+      @include at(md) {
+        background: radial-gradient(ellipse at center, #00000044 40%, #000000cc 80%);
+      }
+    }
+
+    &.-split::after {
+      content: '';
+      z-index: 1;
+
+      @include at(md) {
+        background: linear-gradient(to right, #00000088 50%, #00000000 calc(50% + 1px));
+      }
+    }
+
+    &.-colorize::before {
+      content: '';
+      background: var(--accent-color);
+      mix-blend-mode: color;
+      z-index: 1;
+    }
+
+    &.-multiply {
+      background: white;
+
+      &::before {
+        content: '';
+        background: var(--accent-color);
+        mix-blend-mode: multiply;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__content {
+    --columns: 1;
+    --gap: var(--root-gap, 16px);
+
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(var(--columns, 1), minmax(0, 1fr));
+    align-items: center;
+    z-index: 1;
+
+    @include at(md) {
+      --columns: 2;
+    }
+
+    > * {
+      min-width: 0;
+    }
+
+    // Single child should span full width
+    > :first-child:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  // When inside container, use subgrid to access container's named lines
+  .container > &__content {
+    grid-column: main / main;
+  }
+
+  // Natural content order for mobile
+  &__image {
+    order: 1;
+  }
+
+  &__testimonial {
+    order: 2;
+  }
+
+  &__media {
+    order: 3;
+  }
+
+  &__text {
+    order: 4;
+    padding: 2rem 0;
+  }
+
+  &__cta {
+    order: 5;
+  }
+
+  &__text,
+  &__image,
+  &__media,
+  &__cta,
+  &__testimonial {
+    @include at(md) {
+      order: unset;
+      grid-column: span var(--span, 1);
+    }
+  }
+
+  @include at(md) {
+    --columns: 2;
+  }
+
+  &.-padded {
+    padding: 5rem 0;
+
+    #{$b}__text {
+      padding: 0;
+    }
+  }
+
+  &.-bleed {
+    .container > #{$b}__content {
+      grid-column: main / wide;
+    }
+
+    #{$b}__image {
+      grid-column: 2 / -1;
+    }
+  }
+
+  &.-center {
+    #{$b}__content {
+      justify-items: center;
+      text-align: center;
+    }
+    #{$b}__text {
+      padding: 4rem 0;
+      max-width: fluid-rems(40, 50);
+      justify-items: center;
+    }
+  }
+}

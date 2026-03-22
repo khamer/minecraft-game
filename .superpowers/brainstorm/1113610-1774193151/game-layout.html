@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Puzzler — Layout Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0d0d0d;
+    font-family: 'VT323', monospace;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  .label {
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+  }
+
+  /* === GAME PANEL === */
+  .game {
+    background: #1c1c1c;
+    border: 3px solid #555;
+    width: 340px;
+    padding: 24px 20px;
+    position: relative;
+  }
+
+  .game-title {
+    color: #5EFF5E;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #3a3;
+    margin-bottom: 4px;
+  }
+
+  .stage-label {
+    color: #aaa;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* 2x2 grid */
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+  /* 3x3 grid */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 24px; }
+  /* 4x4 grid */
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 24px; }
+
+  .item {
+    background: #2a2a2a;
+    border: 2px solid #444;
+    padding: 8px 4px 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.1s;
+    position: relative;
+    user-select: none;
+  }
+  .item:hover { border-color: #888; }
+
+  .item.checked {
+    opacity: 0.4;
+    border-color: #333;
+  }
+  .item.checked .item-name {
+    text-decoration: line-through;
+  }
+  .item.checked::after {
+    content: '✓';
+    position: absolute;
+    top: 2px; right: 4px;
+    color: #5EFF5E;
+    font-size: 14px;
+  }
+
+  .item-texture {
+    width: 32px; height: 32px;
+    margin: 0 auto 4px;
+    image-rendering: pixelated;
+    display: block;
+  }
+  .item-name {
+    color: #ddd;
+    font-size: 13px;
+    line-height: 1.1;
+  }
+
+  /* Nether item highlight */
+  .item.nether {
+    border-color: #8B1A1A;
+    background: #2a1a1a;
+  }
+  .item.nether .item-name { color: #FF6B35; }
+
+  .btn-complete {
+    display: block;
+    width: 100%;
+    background: #3a7a3a;
+    border: 3px solid #5EFF5E;
+    color: #5EFF5E;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding: 10px;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #000;
+    transition: background 0.1s;
+  }
+  .btn-complete:hover { background: #4a9a4a; }
+
+  /* Pixel block placeholders */
+  .px { display: block; width: 32px; height: 32px; margin: 0 auto 4px; }
+
+  /* === SUCCESS SCREEN === */
+  .success {
+    background: #1c1c1c;
+    border: 3px solid #FFD700;
+    width: 280px;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .success-title {
+    color: #FFD700;
+    font-size: 48px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px #aa8800;
+    margin-bottom: 8px;
+  }
+  .success-sub {
+    color: #aaa;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .btn-again {
+    background: #7a3a7a;
+    border: 3px solid #cc88ff;
+    color: #cc88ff;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding: 10px 24px;
+    cursor: pointer;
+  }
+  .btn-again:hover { background: #9a5a9a; }
+</style>
+</head>
+<body>
+
+<!-- Stage 1: 2x2 -->
+<div>
+  <div class="label">Stage 1 — 2×2</div>
+  <div class="game">
+    <div class="game-title">PUZZLER</div>
+    <div class="stage-label">Stage 1 of 3</div>
+    <div class="grid-2">
+      <div class="item">
+        <img class="item-texture" src="https://minecraft.wiki/images/Grass_Block_JE7_BE6.png" onerror="this.style.background='#7B9F3A';this.style.display='block'" />
+        <div class="item-name">Grass Block</div>
+      </div>
+      <div class="item checked">
+        <img class="item-texture" src="https://minecraft.wiki/images/Oak_Log_JE4_BE2.png" onerror="this.style.background='#8B6914';this.style.display='block'" />
+        <div class="item-name">Oak Log</div>
+      </div>
+      <div class="item">
+        <img class="item-texture" src="https://minecraft.wiki/images/Stone_JE5.png" onerror="this.style.background='#888';this.style.display='block'" />
+        <div class="item-name">Stone</div>
+      </div>
+      <div class="item">
+        <img class="item-texture" src="https://minecraft.wiki/images/Sand_JE4_BE2.png" onerror="this.style.background='#c8a870';this.style.display='block'" />
+        <div class="item-name">Sand</div>
+      </div>
+    </div>
+    <button class="btn-complete">STAGE COMPLETE</button>
+  </div>
+</div>
+
+<!-- Stage 3: 4x4 (with nether items) -->
+<div>
+  <div class="label">Stage 3 — 4×4 (with nether items)</div>
+  <div class="game">
+    <div class="game-title">PUZZLER</div>
+    <div class="stage-label">Stage 3 of 3</div>
+    <div class="grid-4">
+      <div class="item checked">
+        <canvas class="px" style="background:#888"></canvas>
+        <div class="item-name">Stone</div>
+      </div>
+      <div class="item checked">
+        <canvas class="px" style="background:#7B9F3A"></canvas>
+        <div class="item-name">Grass</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#8B6914"></canvas>
+        <div class="item-name">Oak Log</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#c8a870"></canvas>
+        <div class="item-name">Sand</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#5a4a3a"></canvas>
+        <div class="item-name">Gravel</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#d4aa7d"></canvas>
+        <div class="item-name">Sandstone</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#5a8f3c"></canvas>
+        <div class="item-name">Oak Leaves</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#5b7a3d"></canvas>
+        <div class="item-name">Fern</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#3a3a4a"></canvas>
+        <div class="item-name">Cobblestone</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#e8d8b8"></canvas>
+        <div class="item-name">Birch Log</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#4a3828"></canvas>
+        <div class="item-name">Dark Oak Log</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#d4c890"></canvas>
+        <div class="item-name">Wheat</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#c8a4a4"></canvas>
+        <div class="item-name">Diorite</div>
+      </div>
+      <div class="item">
+        <canvas class="px" style="background:#8a5a3a"></canvas>
+        <div class="item-name">Terracotta</div>
+      </div>
+      <div class="item nether">
+        <canvas class="px" style="background:#7a1a1a"></canvas>
+        <div class="item-name">Netherrack</div>
+      </div>
+      <div class="item nether">
+        <canvas class="px" style="background:#ffd080"></canvas>
+        <div class="item-name">Glowstone</div>
+      </div>
+    </div>
+    <button class="btn-complete">STAGE COMPLETE</button>
+  </div>
+</div>
+
+<!-- Success Screen -->
+<div>
+  <div class="label">Success Screen</div>
+  <div class="success">
+    <div class="success-title">YOU WIN!</div>
+    <div class="success-sub">All materials collected</div>
+    <button class="btn-again">PLAY AGAIN</button>
+  </div>
+</div>
+
+</body>
+</html>

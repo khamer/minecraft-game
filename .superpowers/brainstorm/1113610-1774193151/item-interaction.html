@@ -1,0 +1,64 @@
+<h2>How should players interact with items?</h2>
+<p class="subtitle">Each stage shows a grid of materials to collect. How much interactivity do the items have?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a1a2e;padding:20px;font-family:monospace">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:200px;margin:0 auto">
+        <div style="background:#2d2d2d;border:2px solid #555;border-radius:4px;padding:8px;text-align:center;opacity:0.4;text-decoration:line-through">
+          <div style="width:40px;height:40px;background:#8B6914;margin:0 auto 4px;border:1px solid #666"></div>
+          <small style="color:#aaa;font-size:10px">Oak Log</small>
+        </div>
+        <div style="background:#2d2d2d;border:2px solid #4CAF50;border-radius:4px;padding:8px;text-align:center">
+          <div style="width:40px;height:40px;background:#7B9F3A;margin:0 auto 4px;border:1px solid #666"></div>
+          <small style="color:#aaa;font-size:10px">Grass Block</small>
+        </div>
+        <div style="background:#2d2d2d;border:2px solid #555;border-radius:4px;padding:8px;text-align:center">
+          <div style="width:40px;height:40px;background:#888;margin:0 auto 4px;border:1px solid #666"></div>
+          <small style="color:#aaa;font-size:10px">Stone</small>
+        </div>
+        <div style="background:#2d2d2d;border:2px solid #555;border-radius:4px;padding:8px;text-align:center">
+          <div style="width:40px;height:40px;background:#c8a870;margin:0 auto 4px;border:1px solid #666"></div>
+          <small style="color:#aaa;font-size:10px">Sand</small>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:12px">
+        <button style="background:#4CAF50;color:white;border:none;padding:6px 16px;border-radius:3px;cursor:pointer;font-size:12px">Stage Complete!</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Click to check off</h3>
+      <p>Tap each item to mark it collected (grays out + strikethrough). "Complete" button at bottom to advance. Helps players track what they've gathered.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a1a2e;padding:20px;font-family:monospace">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:200px;margin:0 auto">
+        <div style="background:#2d2d2d;border:2px solid #555;border-radius:4px;padding:8px;text-align:center">
+          <div style="width:40px;height:40px;background:#8B6914;margin:0 auto 4px;border:1px solid #666"></div>
+          <small style="color:#aaa;font-size:10px">Oak Log</small>
+        </div>
+        <div style="background:#2d2d2d;border:2px solid #555;border-radius:4px;padding:8px;text-align:center">
+          <div style="width:40px;height:40px;background:#7B9F3A;margin:0 auto 4px;border:1px solid #666"></div>
+          <small style="color:#aaa;font-size:10px">Grass Block</small>
+        </div>
+        <div style="background:#2d2d2d;border:2px solid #555;border-radius:4px;padding:8px;text-align:center">
+          <div style="width:40px;height:40px;background:#888;margin:0 auto 4px;border:1px solid #666"></div>
+          <small style="color:#aaa;font-size:10px">Stone</small>
+        </div>
+        <div style="background:#2d2d2d;border:2px solid #555;border-radius:4px;padding:8px;text-align:center">
+          <div style="width:40px;height:40px;background:#c8a870;margin:0 auto 4px;border:1px solid #666"></div>
+          <small style="color:#aaa;font-size:10px">Sand</small>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:12px">
+        <button style="background:#4CAF50;color:white;border:none;padding:6px 16px;border-radius:3px;cursor:pointer;font-size:12px">Stage Complete!</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Display only, one button</h3>
+      <p>Items are purely informational — just a list to reference. One "Complete" button advances to the next stage. Simpler, less cluttered.</p>
+    </div>
+  </div>
+</div>

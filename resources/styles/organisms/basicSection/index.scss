@@ -1,0 +1,83 @@
+@use '@/core' as *;
+
+.basicSection {
+  $b: &;
+
+  &__content {
+    --columns: 1;
+    --gap: var(--root-gap, 16px);
+
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(var(--columns, 1), minmax(0, 1fr));
+
+    @include at(md) {
+      --columns: 2;
+    }
+
+    > * {
+      min-width: 0;
+    }
+
+    &.-center {
+      align-items: center;
+    }
+
+    > :first-child:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  // When inside container, position within container's grid
+  .container > &__content {
+    grid-column: main / main;
+  }
+
+  // Natural content order for mobile
+  &__image {
+    order: 1;
+  }
+
+  &__testimonial {
+    order: 2;
+  }
+
+  &__media {
+    order: 3;
+  }
+
+  &__text {
+    order: 4;
+  }
+
+  &__cta {
+    order: 5;
+  }
+
+  &__text,
+  &__image,
+  &__media,
+  &__cta,
+  &__testimonial {
+    @include at(md) {
+      order: unset;
+      grid-column: span var(--span, 1);
+    }
+  }
+
+  &.-wide {
+    #{$b}__content {
+      @include at(md) {
+        --columns: 3;
+      }
+    }
+
+    @include at(md) {
+      :is(#{$b}__text, #{$b}__image, #{$b}__media, #{$b}__cta, #{$b}__testimonial) {
+        &.-wide {
+          grid-column: span var(--span, 2);
+        }
+      }
+    }
+  }
+}

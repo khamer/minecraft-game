@@ -1,0 +1,106 @@
+<!-- MediaBanner - Full viewport decorative media (image stretches entirely, section bg won't show) -->
+<section class="section mediaBanner">
+  <img class="mediaBanner__content" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="" />
+</section>
+
+<!-- MediaBanner with video (image stretches entirely, section bg won't show) -->
+<section class="section mediaBanner">
+  <p-lazy>
+    <video class="mediaBanner__content" inert controls autoplay playsinline muted>
+      <source data-src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <template #placeholder="{ load, modifier }">
+      <div class="media">
+        <picture class="mediaBanner__mask media__mask" :class="modifier">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="" />
+        </picture>
+        <button class="mediaBanner__trigger media__trigger -circle" @click="load" :class="modifier">
+          <span class="srOnly">play</span>
+          <svg class="media__icon icon -circle" viewBox="0 0 96 96">
+            <use href="/main-icons-sprite.svg#play" />
+          </svg>
+        </button>
+      </div>
+    </template>
+  </p-lazy>
+</section>
+
+<!-- MediaBanner with video inside container -->
+<section class="section mediaBanner">
+  <div class="container">
+    <h2 class="h3">With Optional Header inside a container</h2>
+    <div class="mediaBanner__container">
+      <p-lazy>
+        <video class="mediaBanner__content" inert controls autoplay playsinline muted>
+          <source data-src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <template #placeholder="{ load, modifier }">
+          <div class="media">
+            <picture class="mediaBanner__mask media__mask" :class="modifier">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="" />
+            </picture>
+            <button class="mediaBanner__trigger media__trigger -circle" @click="load" :class="modifier">
+              <span class="srOnly">play</span>
+              <svg class="media__icon icon -circle" viewBox="0 0 96 96">
+                <use href="/main-icons-sprite.svg#play" />
+              </svg>
+            </button>
+          </div>
+        </template>
+      </p-lazy>
+    </div>
+  </div>
+</section>
+
+<!-- MediaBanner with overlay (image stretches entirely, section bg won't show) -->
+<section class="section mediaBanner -withOverlay">
+  <img class="mediaBanner__content" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="" />
+  <div class="mediaBanner__overlay"></div>
+</section>
+
+<!-- MediaBanner with text content - Center alignment (overlay added automatically) -->
+<section class="section mediaBanner -withOverlay accent-primary">
+  <img class="mediaBanner__content" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="" />
+  <div class="mediaBanner__overlay"></div>
+  <div class="mediaBanner__content -white -center">
+    <div class="container">
+      <div class="mediaBanner__eyebrow">Featured Content</div>
+      <h2 class="mediaBanner__title h3">Center Aligned Headline</h2>
+      <div class="mediaBanner__actions">
+        <button class="button -navy">Call to Action</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MediaBanner with text content - Left alignment (overlay added automatically) -->
+<section class="section mediaBanner -withOverlay accent-secondary">
+  <img class="mediaBanner__content" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="" />
+  <div class="mediaBanner__overlay"></div>
+  <div class="mediaBanner__content -white -left">
+    <div class="container">
+      <div class="mediaBanner__eyebrow">Featured Content</div>
+      <h2 class="mediaBanner__title h3">Left Aligned Headline</h2>
+      <div class="mediaBanner__actions">
+        <button class="button -navy">Call to Action</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MediaBanner with text content - Right alignment (overlay added automatically) -->
+<section class="section mediaBanner -withOverlay accent-tertiary">
+  <img class="mediaBanner__content" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="" />
+  <div class="mediaBanner__overlay"></div>
+  <div class="mediaBanner__content -white -right">
+    <div class="container">
+      <div class="mediaBanner__eyebrow">Featured Content</div>
+      <h2 class="mediaBanner__title h3">Right Aligned Headline</h2>
+      <div class="mediaBanner__actions">
+        <button class="button -navy">Call to Action</button>
+      </div>
+    </div>
+  </div>
+</section>

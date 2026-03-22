@@ -1,0 +1,1119 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>molecules</title>
+    <!-- Using Vitrine's builtin template -->
+  </head>
+  <body>
+    <div id="app">
+      <div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/accordion">accordion</a></h4>
+      <div><div style="display: grid; gap: 1rem">
+  <p-accordion name="example" class="accordion">
+    <summary class="accordion__summary">
+      <h3 class="accordion__heading">Hey wait - is this a pure CSS accordion now?</h3>
+      <div class="accordion__iconWrapper">
+        <svg class="accordion__icon icon icon--chevron-right" aria-hidden="true" role="presentation">
+          <use href="/main-icons-sprite.svg#chevron-right" />
+        </svg>
+      </div>
+    </summary>
+    <div class="accordion__content">
+      <p>
+        You bet it is – it works great, animates on opening and closing, but there's only one real gotcha now...
+        <strong>browser support.</strong>
+      </p>
+      <p>Neither Firefox nor Safari support <code>interpolate-size: allow-keywords</code> which is required for this implementation.</p>
+    </div>
+  </p-accordion>
+
+  <details name="example" class="accordion accent-primary">
+    <summary class="accordion__summary">
+      <h3 class="accordion__heading">Why do we need a FAQ style module?</h3>
+      <div class="accordion__iconWrapper">
+        <svg class="accordion__icon icon icon--chevron-right" aria-hidden="true" role="presentation">
+          <use href="/main-icons-sprite.svg#chevron-right" />
+        </svg>
+      </div>
+    </summary>
+    <div class="accordion__content">
+      <p>Donec mattis consequat libero at fermentum. Phasellus ultricies ultrices felis eu dapibus. Donec nec pellentesque eros. Proin cursus, felis eu sollicitudin sodales, mi tellus posuere risus, id vehicula enim nisi id risus. Praesent ultrices, eros tempor tincidunt vehicula, sem orci imperdiet ante, iaculis egestas arcu dolor pretium dui. Nullam egestas cursus diam quis ultrices. Praesent mollis ligula vel lorem gravida, at commodo nibh posuere. Maecenas id mollis metus, sit amet ultricies urna. Pellentesque congue elementum massa, a tristique sem feugiat ac.</p>
+    </div>
+  </details>
+
+  <details name="example" class="accordion accent-tertiary">
+    <summary class="accordion__summary">
+      <h3 class="accordion__heading">Is this considered a frequently asked question?</h3>
+      <div class="accordion__iconWrapper">
+        <svg class="accordion__icon icon icon--chevron-right" aria-hidden="true" role="presentation">
+          <use href="/main-icons-sprite.svg#chevron-right" />
+        </svg>
+      </div>
+    </summary>
+    <div class="accordion__content">
+      <p>Donec mattis consequat libero at fermentum. Phasellus ultricies ultrices felis eu dapibus. Donec nec pellentesque eros. Proin cursus, felis eu sollicitudin sodales, mi tellus posuere risus, id vehicula enim nisi id risus. Praesent ultrices, eros tempor tincidunt vehicula, sem orci imperdiet ante, iaculis egestas arcu dolor pretium dui. Nullam egestas cursus diam quis ultrices. Praesent mollis ligula vel lorem gravida, at commodo nibh posuere. Maecenas id mollis metus, sit amet ultricies urna. Pellentesque congue elementum massa, a tristique sem feugiat ac.</p>
+    </div>
+  </details>
+
+  <details name="example" class="accordion">
+    <summary class="accordion__summary">
+      <h3 class="accordion__heading">Can this be used in more general situations?</h3>
+      <div class="accordion__iconWrapper">
+        <svg class="accordion__icon icon icon--chevron-right" aria-hidden="true" role="presentation">
+          <use href="/main-icons-sprite.svg#chevron-right" />
+        </svg>
+      </div>
+    </summary>
+    <div class="accordion__content">
+      <p>Donec mattis consequat libero at fermentum. Phasellus ultricies ultrices felis eu dapibus. Donec nec pellentesque eros. Proin cursus, felis eu sollicitudin sodales, mi tellus posuere risus, id vehicula enim nisi id risus. Praesent ultrices, eros tempor tincidunt vehicula, sem orci imperdiet ante, iaculis egestas arcu dolor pretium dui. Nullam egestas cursus diam quis ultrices. Praesent mollis ligula vel lorem gravida, at commodo nibh posuere. Maecenas id mollis metus, sit amet ultricies urna. Pellentesque congue elementum massa, a tristique sem feugiat ac.</p>
+    </div>
+  </details>
+
+  <details name="example" class="accordion">
+    <summary class="accordion__summary">
+      <h3 class="accordion__heading">Why use a different color for interactions vs. navigation?</h3>
+      <div class="accordion__iconWrapper">
+        <svg class="accordion__icon icon icon--chevron-right" aria-hidden="true" role="presentation">
+          <use href="/main-icons-sprite.svg#chevron-right" />
+        </svg>
+      </div>
+    </summary>
+    <div class="accordion__content">
+      <p>Donec mattis consequat libero at fermentum. Phasellus ultricies ultrices felis eu dapibus. Donec nec pellentesque eros. Proin cursus, felis eu sollicitudin sodales, mi tellus posuere risus, id vehicula enim nisi id risus. Praesent ultrices, eros tempor tincidunt vehicula, sem orci imperdiet ante, iaculis egestas arcu dolor pretium dui. Nullam egestas cursus diam quis ultrices. Praesent mollis ligula vel lorem gravida, at commodo nibh posuere. Maecenas id mollis metus, sit amet ultricies urna. Pellentesque congue elementum massa, a tristique sem feugiat ac.</p>
+    </div>
+  </details>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/actions">actions</a></h4>
+      <div><div class="actions">
+  <a class="button -outline" href="#">Learn More</a>
+  <a class="button" href="#">Sign Up</a>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/banner">banner</a></h4>
+      <div><div class="container">
+  <p-dismissable class="banner" name="banner1" v-slot="{ close }">
+    <div class="banner__content">
+      <p>
+        Consectetur aliquid qui sapiente minima libero. Vel blanditiis distinctio numquam aliquam temporibus repellendus. Quis esse vitae vitae sunt sapiente velit. Repellendus facilis voluptate dolore debitis quas! Vitae dignissimos aliquid porro
+
+        <a href="#">Dolor magni amet quaerat</a> nobis quis Laborum deserunt quo delectus optio eius eaque Mollitia reprehenderit maiores numquam libero nesciunt Quae non dolor exercitationem debitis at Excepturi quam eum in voluptas.
+      </p>
+      <button class="banner__close" @click="close">
+        <svg class="icon accent-white -heavy" viewBox="0 0 18 18"><use href="/main-icons-sprite.svg#close" /></svg>
+      </button>
+    </div>
+  </p-dismissable>
+</div>
+
+<div class="container">
+  <p-dismissable class="banner" name="banner2" v-slot="{ close }">
+    <div class="banner__content">
+      <p>Consectetur aliquid qui sapiente minima libero. Vel blanditiis distinctio numquam aliquam temporibus repellendus. Quis esse vitae vitae sunt sapiente velit. Repellendus facilis voluptate dolore debitis quas! Vitae dignissimos aliquid porro Dolor magni amet quaerat nobis quis Laborum deserunt quo delectus optio eius eaque Mollitia reprehenderit maiores numquam libero nesciunt Quae non dolor exercitationem debitis at Excepturi quam eum in voluptas.</p>
+      <button class="banner__action button -outline-fill accent-white" @click="close">I accept</button>
+    </div>
+  </p-dismissable>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/card">card</a></h4>
+      <div><h2>Card</h2>
+<div class="card" style="max-width: 25.75rem">
+  <div class="card__content">
+    <span class="card__title h3"> Title of card that will fall to two lines </span>
+    <p class="card__description">Quisque tristique Standard Text Link sagittis dignissim. Morbi vitae orci sollicitudin, viverra massa quis, eleifend velit. Aenean ac porta nisl. Ut eu bibendum nisi.</p>
+    <a href="#" class="card__cta link -wide">
+      Standard Text Link
+      <svg class="card__ctaIcon link__icon">
+        <use href="/main-icons-sprite.svg#arrow-right" />
+      </svg>
+    </a>
+  </div>
+  <div class="card__imageWrapper">
+    <img src="https://panoramicireland.com/media/k2/items/cache/cb9c495b17bc28a44ffb50c55572ed63_XL.jpg" alt="" class="card__image" />
+  </div>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/card/card--condensed">card--condensed</a></h4>
+      <div><h2>Card Condensed</h2>
+<div class="card -condensed" style="max-width: 25.75rem">
+  <div class="card__content">
+    <p class="card__meta">Posted Aug 12, 2023 by <a href="#" class="card__metaLink">Daphne Writesposts</a></p>
+    <span class="card__title h3"> Title of card that will fall to two lines </span>
+    <p class="card__description">Quisque tristique sagittis dignissim. Morbi vitae orci sollicitudin, viverra massa quis, eleifend velit. Aenean ac porta nisl. Ut eu bibendum nisi.</p>
+    <p class="card__meta">
+      <svg class="card__metaIcon">
+        <use href="/main-icons-sprite.svg#clock" /></svg
+      >15 Minute Read
+    </p>
+    <ul class="card__tagList">
+      <li class="card__tagListItem">
+        <p class="tag">
+          <svg class="tag__icon">
+            <use href="/main-icons-sprite.svg#tag" />
+          </svg>
+          Simple Tag
+        </p>
+      </li>
+      <li class="card__tagListItem">
+        <p class="tag">
+          <svg class="tag__icon">
+            <use href="/main-icons-sprite.svg#tag" />
+          </svg>
+          Simple Tag
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="card__imageWrapper">
+    <img src="https://panoramicireland.com/media/k2/items/cache/cb9c495b17bc28a44ffb50c55572ed63_XL.jpg" alt="" class="card__image" />
+  </div>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/card/card--flipped">card--flipped</a></h4>
+      <div><h2>Card Flipped</h2>
+<div class="card -flipped" style="max-width: 25.75rem">
+  <div class="card__content">
+    <span class="card__title h3"> Title of card that will fall to two lines </span>
+    <p class="card__meta">
+      <svg class="card__metaIcon">
+        <use href="/main-icons-sprite.svg#clock" /></svg
+      >Posted Aug 12, 2023 by <a href="#" class="card__metaLink">Daphne Writesposts</a>
+    </p>
+    <p class="card__description">Quisque tristique sagittis dignissim. Morbi vitae orci sollicitudin, viverra massa quis, eleifend velit. Aenean ac porta nisl. Ut eu bibendum nisi.</p>
+    <a href="" class="card__button button"> Default Button </a>
+  </div>
+  <div class="card__imageWrapper">
+    <img src="https://panoramicireland.com/media/k2/items/cache/cb9c495b17bc28a44ffb50c55572ed63_XL.jpg" alt="" class="card__image" />
+  </div>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/card/card--icon">card--icon</a></h4>
+      <div><h2>Card Icon</h2>
+<div class="card" style="max-width: 25.75rem">
+  <div class="card__content">
+    <div class="card__iconWrapper">
+      <svg class="card__icon icon icon-layer-group">
+        <use href="/main-icons-sprite.svg#layers" />
+      </svg>
+    </div>
+    <span class="card__title h3"> Title of card that will fall to two lines </span>
+    <p class="card__description">Quisque tristique sagittis dignissim. Morbi vitae orci sollicitudin, viverra massa quis, eleifend velit. Aenean ac porta nisl. Ut eu bibendum nisi.</p>
+    <a href="" class="card__button button"> Default Button </a>
+  </div>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/card/card--tags">card--tags</a></h4>
+      <div><h2>Card Tags</h2>
+<div class="card" style="max-width: 25.75rem">
+  <div class="card__content">
+    <ul class="card__tagList">
+      <li class="card__tagListItem">
+        <p class="tag">
+          <svg class="tag__icon">
+            <use href="/main-icons-sprite.svg#tag" />
+          </svg>
+          Simple Tag
+        </p>
+      </li>
+      <li class="card__tagListItem">
+        <p class="tag">
+          <svg class="tag__icon">
+            <use href="/main-icons-sprite.svg#tag" />
+          </svg>
+          Simple Tag
+        </p>
+      </li>
+    </ul>
+    <span class="card__title h3"> Title of card that will fall to two lines </span>
+    <p class="card__meta">Posted Aug 12, 2023 by <a href="#" class="card__metaLink">Daphne Writesposts</a></p>
+    <p class="card__meta">
+      <svg class="card__metaIcon">
+        <use href="/main-icons-sprite.svg#clock" />
+      </svg>
+      15 Minute Read
+    </p>
+  </div>
+  <div class="card__imageWrapper">
+    <img src="https://panoramicireland.com/media/k2/items/cache/cb9c495b17bc28a44ffb50c55572ed63_XL.jpg" alt="" class="card__image" />
+  </div>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/checklist">checklist</a></h4>
+      <div><ul class="checklist">
+  <li class="checklist__item">
+    <input type="checkbox" id="check1" class="checklist__input" />
+    <label for="check1" class="checklist__label"> Elit non fuga ratione quidem eligendi? Temporibus dolor eveniet distinctio tempora adipisci Sed ducimus voluptate voluptate repudiandae quis? Perferendis molestias eum dolorem dolorem veniam. Ipsa enim animi eveniet qui totam </label>
+  </li>
+  <li class="checklist__item">
+    <input type="checkbox" id="check2" checked class="checklist__input" />
+    <label for="check2" class="checklist__label"> Lorem maxime dolores dolores saepe quia quo Numquam quas veritatis officia incidunt est beatae debitis Rerum voluptates illum accusamus fugit ipsa impedit magni Reiciendis sapiente quidem consequuntur ut molestias voluptatum </label>
+  </li>
+
+  <li class="checklist__item">
+    <input type="radio" name="radio1" id="radio1" class="checklist__input" />
+    <label for="radio1" class="checklist__label"> Ipsum blanditiis sapiente reiciendis laboriosam maxime Sapiente ab exercitationem saepe vero blanditiis quis Tempora quibusdam iure perferendis quasi provident? Consequuntur velit reprehenderit voluptatem vel vitae. Placeat harum labore voluptatibus inventore </label>
+  </li>
+
+  <li class="checklist__item">
+    <input type="radio" name="radio1" id="radio2" checked class="checklist__input" />
+    <label for="radio2" class="checklist__label"> Ipsum nesciunt incidunt soluta corporis distinctio? Tempore enim possimus architecto fugit expedita. Alias voluptates hic cum atque nihil Aliquam beatae laborum error id saepe Inventore aspernatur vitae cumque repellat magni. </label>
+  </li>
+</ul>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/featureVideo">featureVideo</a></h4>
+      <div><div class="featureVideo accent-primary">
+  <div class="featureVideo__media">
+    <div class="media">
+      <p-lazy>
+        <video class="media__content" controls playsinline>
+          <source data-src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <template #placeholder="{ load, modifier }">
+          <picture class="media__mask" :class="modifier">
+            <img srcset="https://unsplash.it/960/540?random&gravity=center" alt="Video thumbnail" />
+          </picture>
+          <button class="media__trigger" @click="load" :class="modifier">
+            <span class="srOnly" aria-label="Play video">play</span>
+            <svg class="media__icon icon -circle" viewBox="0 0 96 96">
+              <use href="/main-icons-sprite.svg#play" />
+            </svg>
+          </button>
+        </template>
+      </p-lazy>
+    </div>
+  </div>
+  <div class="featureVideo__background"></div>
+  <div class="featureVideo__content">
+    <h3 class="featureVideo__title h3">Heading Placeholder</h3>
+    <p class="featureVideo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit neque a cursus tristique. Phasellus eleifend consectetur felis, in eleifend nulla vulputate eget.</p>
+  </div>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/field">field</a></h4>
+      <div><label class="field">
+  Text field:
+  <input class="input" type="text" placeholder="Text" />
+  <div class="field__help">Coaching Text</div>
+</label>
+
+<label class="field">Email: <input class="input" type="email" placeholder="person@internet.tld" /></label>
+
+<h5>-inline</h5>
+
+<label class="field -inline"><input class="checkbox" type="checkbox" /> Checkbox</label>
+
+<label class="field -inline"><input class="radio" type="radio" /> Radio</label>
+
+<label class="field -inline">
+  Text field:
+  <input class="input" type="text" placeholder="Text" />
+  <div class="field__help">Coaching Text</div>
+</label>
+
+<label class="field -inline">Email: <input class="input" type="email" placeholder="person@internet.tld" /></label>
+
+<h5>-reversed</h5>
+
+<label class="field -reversed">
+  <input class="checkbox" type="checkbox" /> Checkbox
+  <div class="field__help">Dolor architecto facere!</div>
+</label>
+
+<label class="field -reversed"><input class="radio" type="radio" /> Radio</label>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/list">list</a></h4>
+      <div><div class="richText">
+  <ul>
+    <li>Ipsum voluptas cupiditate.</li>
+    <li>Adipisicing impedit accusantium!</li>
+    <li>
+      Amet laudantium nulla.
+      <ul>
+        <li>Etiam euismod nunc id felis suscipit sodales sed in quam odio proin tempus ultricies orci, sed ultricies leo.</li>
+        <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque finibus, odio id cursus porta, neque odio imperdiet purus, at tempor lorem lacus ut massa.</li>
+        <li>Amet laudantium nulla.</li>
+      </ul>
+    </li>
+    <li>Amet laudantium nulla.</li>
+  </ul>
+
+  <ol>
+    <li>Ipsum voluptas cupiditate.</li>
+    <li>Adipisicing impedit accusantium!</li>
+    <li>
+      Lorem minus sit corporis ut fugit?
+      <ol>
+        <li>Elit neque quia inventore</li>
+        <li>Consectetur alias a eius.</li>
+        <li>Lorem vero nam ab</li>
+      </ol>
+    </li>
+
+    <li>Amet laudantium nulla.</li>
+  </ol>
+</div>
+
+<ul class="list">
+  <li>Dolor nulla a illum veniam cumque Quod repudiandae atque tempore deleniti ut beatae culpa. Molestias distinctio sit necessitatibus tenetur aliquam fuga. Ducimus aliquam commodi eum autem atque? Fuga sequi nesciunt</li>
+  <li>Ipsum velit delectus explicabo eum voluptatem. Debitis</li>
+  <li>Lorem aspernatur hic eos dignissimos tempore quia!</li>
+</ul>
+
+<ol class="list">
+  <li>Adipisicing quaerat nemo</li>
+  <li>Dolor sit optio?</li>
+  <li>Dolor dolor dolorem.</li>
+  <li>Amet quas aliquam</li>
+</ol>
+
+<dl class="list">
+  <dt>Amet iure.</dt>
+  <dd>Ipsum id sequi molestiae doloribus sequi Deserunt quos modi quos saepe voluptate eum vel esse Neque excepturi ratione id modi quo. Suscipit blanditiis officia quod saepe vero Mollitia dolorum magni.</dd>
+  <dt>Adipisicing a nesciunt.</dt>
+  <dd>Amet rem cumque quo asperiores saepe, saepe! Quod natus eveniet dolore ducimus at nisi beatae Iste rerum placeat id laboriosam officia. Corrupti tempora ad hic magni laudantium Cum voluptates aut</dd>
+  <dt>Amet minus corrupti</dt>
+  <dd>Dolor distinctio repellendus aliquid sint necessitatibus. Minus quidem tempora obcaecati provident molestias, odio. Iusto itaque magni facere quos unde Eaque qui quis voluptas nobis minima? Doloribus facere inventore natus fugit.</dd>
+  <dt>Elit commodi voluptatibus.</dt>
+  <dd>Dolor voluptatibus et praesentium aliquam debitis vitae. Saepe nihil enim dicta doloremque expedita. Id consequuntur modi maxime omnis delectus Cum omnis voluptatum molestias eius incidunt? Consequuntur eaque non animi dolore.</dd>
+  <dt>Dolor nulla inventore.</dt>
+  <dd>Ipsum ullam facilis similique labore quis Molestiae modi ratione tenetur cumque aspernatur aliquid Nemo culpa velit corrupti excepturi illum Repellendus voluptates similique fugiat dolorum rem iusto Tenetur animi voluptatibus similique!</dd>
+  <dt>Amet in labore?</dt>
+  <dd>
+    Amet eum explicabo provident pariatur magni cumque. Laborum eius ab totam exercitationem dicta. Nostrum minima sint praesentium nobis blanditiis. Fugiat commodi illo nihil reiciendis ab Voluptas in consequatur ea earum.
+
+    <dl class="list">
+      <dt>Amet voluptatibus inventore</dt>
+      <dd>Ipsum tenetur nemo omnis rerum modi fugiat aut, voluptas. Dolores minus sunt adipisci suscipit voluptas Tempore ullam explicabo quos facilis soluta recusandae Explicabo velit earum rem consequatur itaque exercitationem. Amet</dd>
+    </dl>
+  </dd>
+</dl>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/logoGrid">logoGrid</a></h4>
+      <div><ul class="logoGrid">
+  <li class="logoGrid__item">
+    <a href="#" class="logoGrid__link">
+      <span class="srOnly">Logo name</span>
+    </a>
+    <img class="logoGrid__img" alt="Logo Name" src="https://placehold.co/260x150/9933ff/FFF?text=logo" />
+  </li>
+  <li class="logoGrid__item">
+    <a href="#" class="logoGrid__link">
+      <span class="srOnly">Logo name</span>
+    </a>
+    <img class="logoGrid__img" alt="Logo Name" src="https://placehold.co/260x150/9933ff/FFF?text=logo" />
+  </li>
+  <li class="logoGrid__item">
+    <a href="#" class="logoGrid__link">
+      <span class="srOnly">Logo name</span>
+    </a>
+    <img class="logoGrid__img" alt="Logo Name" src="https://placehold.co/260x150/9933ff/FFF?text=logo" />
+  </li>
+  <li class="logoGrid__item">
+    <a href="#" class="logoGrid__link">
+      <span class="srOnly">Logo name</span>
+    </a>
+    <img class="logoGrid__img" alt="Logo Name" src="https://placehold.co/260x150/9933ff/FFF?text=logo" />
+  </li>
+  <li class="logoGrid__item">
+    <a href="#" class="logoGrid__link">
+      <span class="srOnly">Logo name</span>
+    </a>
+    <img class="logoGrid__img" alt="Logo Name" src="https://placehold.co/260x150/9933ff/FFF?text=logo" />
+  </li>
+  <li class="logoGrid__item">
+    <a href="#" class="logoGrid__link">
+      <span class="srOnly">Logo name</span>
+    </a>
+    <img class="logoGrid__img" alt="Logo Name" src="https://placehold.co/260x150/9933ff/FFF?text=logo" />
+  </li>
+</ul>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/mobileNavigation">mobileNavigation</a></h4>
+      <div><nav class="mobileNavigation">
+  <p-openable class="mobileNavigation__menu button -circle -ghost" label="menu">
+    <template #toggle>
+      <svg class="button__icon icon"><use href="/main-icons-sprite.svg#bars" /></svg>
+    </template>
+    <template v-slot="{ click }">
+      <div class="mobileNavigation__pane" v-scrolllock>
+        <div class="mobileNavigation__title">Menu</div>
+        <ul class="mobileNavigation__list" v-directionals>
+          <li>
+            <p-openable class="mobileNavigation__button" name="submenu">
+              <template #toggle>
+                Submenu
+                <svg class="icon"><use href="/main-icons-sprite.svg#chevron-right" /></svg>
+              </template>
+              <template v-slot="{ click }">
+                <div class="mobileNavigation__pane">
+                  <div class="mobileNavigation__title">
+                    <div class="mobileNavigation__actions">
+                      <button class="button -circle -ghost" @click.stopPropagation="click" tabindex="-1">
+                        <svg class="icon"><use href="/main-icons-sprite.svg#chevron-left" /></svg>
+                      </button>
+                    </div>
+                    Menu
+                  </div>
+                  <ul class="mobileNavigation__list" v-directionals>
+                    <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Consectetur asperiores</a></li>
+                    <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Consectetur asperiores</a></li>
+                    <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Amet porro.</a></li>
+                    <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Ipsum dolorem</a></li>
+                  </ul>
+                </div>
+              </template>
+            </p-openable>
+          </li>
+          <li>
+            <p-openable class="mobileNavigation__button" name="submenu">
+              <template #toggle>
+                STUFF
+                <svg class="icon"><use href="/main-icons-sprite.svg#chevron-right" /></svg>
+              </template>
+              <template v-slot="{ click }">
+                <div class="mobileNavigation__pane">
+                  <div class="mobileNavigation__title">
+                    <div class="mobileNavigation__actions">
+                      <button class="button -circle -ghost" @click.stopPropagation="click" tabindex="-1">
+                        <svg class="icon"><use href="/main-icons-sprite.svg#chevron-left" /></svg>
+                      </button>
+                    </div>
+                    Menu
+                  </div>
+                  <ul class="mobileNavigation__list" v-directionals>
+                    <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Consectetur asperiores</a></li>
+                    <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Consectetur asperiores</a></li>
+                    <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Amet porro.</a></li>
+                    <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Ipsum dolorem</a></li>
+                  </ul>
+                </div>
+              </template>
+            </p-openable>
+          </li>
+          <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Consectetur asperiores</a></li>
+          <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Amet porro.</a></li>
+          <li class="mobileNavigation__item"><a href="" class="mobileNavigation__link">Ipsum dolorem</a></li>
+          <li class="mobileNavigation__item">
+            <a class="mobileNavigation__link" href="">Amet impedit cumque</a>
+          </li>
+          <li class="mobileNavigation__item">
+            <a class="mobileNavigation__link" href="">Consectetur vitae temporibus!</a>
+          </li>
+          <li class="mobileNavigation__item">
+            <a class="mobileNavigation__link" href="">Consectetur doloremque reiciendis</a>
+          </li>
+          <li class="mobileNavigation__item">
+            <a class="mobileNavigation__link" href="">Dolor pariatur rerum.</a>
+          </li>
+          <li class="mobileNavigation__item">
+            <a class="mobileNavigation__link" href="">Ipsum a officiis.</a>
+          </li>
+          <li class="mobileNavigation__item">
+            <a class="mobileNavigation__link" href="">Dolor unde debitis.</a>
+          </li>
+          <li class="mobileNavigation__item">
+            <a class="mobileNavigation__link" href="">Adipisicing delectus velit</a>
+          </li>
+          <li class="mobileNavigation__item">
+            <a class="mobileNavigation__link" href="">Amet aliquam voluptates</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mobileNavigation__closeButton">
+        <button class="button -circle -ghost" @click="click">
+          <svg class="button__icon icon"><use href="/main-icons-sprite.svg#close" /></svg>
+        </button>
+      </div>
+    </template>
+  </p-openable>
+</nav>
+
+<p>Elit nesciunt repellat aut exercitationem minus Ea doloribus asperiores quos aliquam repellat Et dolor minima eaque nostrum dolore animi. Debitis expedita assumenda dolores tenetur recusandae Ea nesciunt totam tenetur excepturi</p>
+<p>Lorem nisi eveniet asperiores itaque fugit nam Iusto culpa enim aspernatur dolore error Doloribus eligendi ab id consequatur ratione Maxime quae et esse corrupti magni. Totam exercitationem dolor voluptate soluta.</p>
+<p>Adipisicing lorem beatae recusandae nisi id Facere distinctio laboriosam similique est quas. Laboriosam quam veniam impedit nostrum rem. Reiciendis praesentium totam nobis tenetur adipisci. Fuga odit corporis ducimus ipsam alias.</p>
+<p>Consectetur dolor labore modi eaque delectus Accusamus eligendi in sequi sapiente enim Corporis laudantium inventore odit minima culpa Eum ducimus molestiae sapiente assumenda facere ex. Quaerat itaque aliquam aspernatur quo</p>
+<p>Adipisicing nesciunt similique illum sint iure, aliquam? Ipsam fugiat labore explicabo itaque error? Nulla sequi alias ab provident vitae Commodi quasi iste omnis provident saepe Exercitationem dolorum quod magni inventore</p>
+<p>Sit fugit a distinctio ipsa fugiat. Totam in tempore tempora laboriosam rem Facilis fugit excepturi iure eius doloribus, expedita numquam? Suscipit commodi iusto cum assumenda voluptatum, unde nihil Ab molestiae?</p>
+<p>Elit voluptate quos velit nostrum tempora minima. Perspiciatis odit voluptatibus placeat laudantium at Corporis illo saepe ducimus explicabo alias. Quia tenetur corporis odit dicta esse laboriosam Placeat dolore velit necessitatibus?</p>
+<p>Elit ipsam alias maxime pariatur tenetur. Culpa a aspernatur quas blanditiis culpa. Laudantium exercitationem accusantium corrupti vero rerum! Eligendi corporis eveniet eos dignissimos facilis Tempora ab cum sapiente vero placeat.</p>
+<p>Consectetur distinctio temporibus error voluptate nisi recusandae odio quis Enim quam officia ipsam vel consequatur beatae laudantium pariatur est? Distinctio id quos ea repellendus quo Impedit nulla necessitatibus in quisquam.</p>
+<p>Lorem optio eligendi quis architecto laboriosam Similique possimus fugit dolorum sequi atque dolores. Obcaecati corporis labore accusamus fuga voluptatem inventore laboriosam quod perspiciatis. Magni sapiente accusamus veniam harum obcaecati. Quo</p>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/navigation">navigation</a></h4>
+      <div><nav class="navigation" v-directionals>
+  <ul class="navigation__list">
+    <li class="navigation__item" v-directionals>
+      <p-openable class="navigation__button" label="Default Dropdown" :close-on-blur="false">
+        <template #default>
+          <div class="navigation__dropdown dropdown grid -columns-7">
+            <div class="cell -span-2">
+              <span class="h5">Heading</span>
+              <ul class="dropdown__list">
+                <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                <li class="dropdown__item">
+                  <p-openable class="dropdown__button link" label="Nested Dropdown" :close-on-blur="false" name="subdropdown">
+                    <template #toggle>
+                      Dropdown
+                      <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-right" /></svg>
+                    </template>
+                    <template #default>
+                      <div class="dropdown -toRight">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                          <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                          <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+                          <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+                        </ul>
+                      </div>
+                    </template>
+                  </p-openable>
+                </li>
+                <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+                <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+              </ul>
+            </div>
+            <div class="cell -span-2">
+              <span class="h5">Heading</span>
+              <ul class="dropdown__list">
+                <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                <li class="dropdown__item">
+                  <p-openable class="dropdown__button link" label="Nested Dropdown" :close-on-blur="false" name="subdropdown">
+                    <template #toggle>
+                      Dropdown
+                      <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-right" /></svg>
+                    </template>
+                    <template #default>
+                      <div class="dropdown -toRight">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                          <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                          <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+                          <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+                        </ul>
+                      </div>
+                    </template>
+                  </p-openable>
+                </li>
+                <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+                <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+              </ul>
+            </div>
+            <div class="cell -span-3">
+              <div class="card" style="max-width: 300px">
+                <div class="card__content">
+                  <span class="card__title h3"> Title of card </span>
+                  <a href="#" class="card__cta link -wide">
+                    Standard Text Link
+                    <svg class="card__ctaIcon link__icon">
+                      <use href="/main-icons-sprite.svg#arrow-right" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__imageWrapper">
+                  <img src="https://panoramicireland.com/media/k2/items/cache/cb9c495b17bc28a44ffb50c55572ed63_XL.jpg" alt="" class="card__image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </p-openable>
+    </li>
+    <li class="navigation__item" v-directionals>
+      <p-openable class="navigation__button" label="Centered Dropdown" :close-on-blur="false">
+        <template #default>
+          <div class="navigation__dropdown -center dropdown">
+            <ul class="dropdown__list">
+              <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+              <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+              <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+              <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+            </ul>
+          </div>
+        </template>
+      </p-openable>
+    </li>
+    <li class="navigation__item -wide" v-directionals>
+      <p-openable class="navigation__button" label="Full-width Dropdown" :close-on-blur="false">
+        <template #default>
+          <div class="navigation__dropdown dropdown container">
+            <div class="grid -columns-3">
+              <div class="cell">
+                <h3>Heading</h3>
+                <p>Adipisicing obcaecati tempora qui ullam voluptates beatae? Assumenda soluta quae</p>
+                <ul class="dropdown__list">
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+                </ul>
+              </div>
+              <div class="cell">
+                <h3>Heading</h3>
+                <p>Adipisicing obcaecati tempora qui ullam voluptates beatae? Assumenda soluta quae</p>
+                <ul class="dropdown__list">
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+                </ul>
+              </div>
+              <div class="cell">
+                <h3>Heading</h3>
+                <p>Adipisicing obcaecati tempora qui ullam voluptates beatae? Assumenda soluta quae</p>
+                <ul class="dropdown__list">
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+                  <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </template>
+      </p-openable>
+    </li>
+    <li class="navigation__item" v-directionals>
+      <p-openable class="navigation__button" label="Right Aligned Dropdown" :close-on-blur="false">
+        <template #default>
+          <div class="navigation__dropdown -rightAligned dropdown">
+            <ul class="dropdown__list">
+              <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+              <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+              <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+              <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+            </ul>
+          </div>
+        </template>
+      </p-openable>
+    </li>
+  </ul>
+</nav>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/navigation/navigation-hoverable">navigation-hoverable</a></h4>
+      <div><nav class="navigation" v-directionals>
+  <ul class="navigation__list">
+    <li class="navigation__item" v-directionals>
+      <p-openable class="navigation__button" label="Default Dropdown" :close-on-blur="false" :hover-or-click="true">
+        <template #default>
+          <div class="navigation__dropdown">
+            <ul>
+              <li>
+                <a href=""><span>Consectetur asperiores</span></a>
+              </li>
+              <li>
+                <a href=""><span>Consectetur asperiores</span></a>
+              </li>
+              <li>
+                <a href=""><span>Amet porro.</span></a>
+              </li>
+              <li>
+                <a href=""><span>Ipsum dolorem</span></a>
+              </li>
+            </ul>
+          </div>
+        </template>
+      </p-openable>
+    </li>
+    <li class="navigation__item" v-directionals>
+      <p-openable class="navigation__button" label="Centered Dropdown" :close-on-blur="false" :hover-or-click="true">
+        <template #default>
+          <div class="navigation__dropdown -center">
+            <ul>
+              <li>
+                <a href=""><span>Consectetur asperiores</span></a>
+              </li>
+              <li>
+                <a href=""><span>Consectetur asperiores</span></a>
+              </li>
+              <li>
+                <a href=""><span>Amet porro.</span></a>
+              </li>
+              <li>
+                <a href=""><span>Ipsum dolorem</span></a>
+              </li>
+            </ul>
+          </div>
+        </template>
+      </p-openable>
+    </li>
+    <li class="navigation__item -wide" v-directionals>
+      <p-openable class="navigation__button" label="Full-width Dropdown" :close-on-blur="false" :hover-or-click="true">
+        <template #default>
+          <div class="navigation__dropdown grid -columns-3">
+            <div class="cell">
+              <h3>Heading</h3>
+              <p>Adipisicing obcaecati tempora qui ullam voluptates beatae? Assumenda soluta quae</p>
+              <ul>
+                <li>
+                  <a href=""><span>Consectetur asperiores</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Consectetur asperiores</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Amet porro.</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Ipsum dolorem</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="cell">
+              <h3>Heading</h3>
+              <p>Adipisicing obcaecati tempora qui ullam voluptates beatae? Assumenda soluta quae</p>
+              <ul>
+                <li>
+                  <a href=""><span>Consectetur asperiores</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Consectetur asperiores</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Amet porro.</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Ipsum dolorem</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="cell">
+              <h3>Heading</h3>
+              <p>Adipisicing obcaecati tempora qui ullam voluptates beatae? Assumenda soluta quae</p>
+              <ul>
+                <li>
+                  <a href=""><span>Consectetur asperiores</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Consectetur asperiores</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Amet porro.</span></a>
+                </li>
+                <li>
+                  <a href=""><span>Ipsum dolorem</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </template>
+      </p-openable>
+    </li>
+    <li class="navigation__item" v-directionals>
+      <p-openable class="navigation__button" label="Right Aligned Dropdown" :close-on-blur="false" :hover-or-click="true">
+        <template #default>
+          <div class="navigation__dropdown -rightAligned">
+            <ul>
+              <li>
+                <a href=""><span>Consectetur asperiores</span></a>
+              </li>
+              <li>
+                <a href=""><span>Consectetur asperiores</span></a>
+              </li>
+              <li>
+                <a href=""><span>Amet porro.</span></a>
+              </li>
+              <li>
+                <a href=""><span>Ipsum dolorem</span></a>
+              </li>
+            </ul>
+          </div>
+        </template>
+      </p-openable>
+    </li>
+  </ul>
+</nav>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/pagination">pagination</a></h4>
+      <div><nav class="pagination accent-secondary" aria-label="Pagination">
+  <ul class="pagination__list">
+    <li class="pagination__item">
+      <button class="pagination__button button" disabled>
+        <span class="srOnly">Previous</span>
+        <svg class="pagination__icon" viewBox="0 0 18 12">
+          <use href="/main-icons-sprite.svg#arrow-left" />
+        </svg>
+      </button>
+    </li>
+    <li class="pagination__item">
+      <span class="pagination__current" aria-label="Page 1" aria-current="page">1</span>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="#" aria-label="Page 2">2</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="#" aria-label="Page 3">3</a>
+    </li>
+    <li class="pagination__item">
+      <span class="pagination__skip">...</span>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="#" aria-label="Page 5">5</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__button button" href="#">
+        <span class="srOnly">Next</span>
+        <svg class="pagination__icon" viewBox="0 0 18 12">
+          <use href="/main-icons-sprite.svg#arrow-right" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination" aria-label="Pagination">
+  <ul class="pagination__list">
+    <li class="pagination__item">
+      <button class="pagination__button button" disabled>
+        <span class="srOnly">Previous</span>
+        <svg class="pagination__icon" viewBox="0 0 18 12">
+          <use href="/main-icons-sprite.svg#arrow-left" />
+        </svg>
+      </button>
+    </li>
+    <li class="pagination__item">
+      <span class="pagination__current" aria-label="Page 1" aria-current="page">1</span>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="#" aria-label="Page 2">2</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="#" aria-label="Page 3">3</a>
+    </li>
+    <li class="pagination__item">
+      <span class="pagination__skip">...</span>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="#" aria-label="Page 5">5</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__button button" href="#">
+        <span class="srOnly">Next</span>
+        <svg class="pagination__icon" viewBox="0 0 18 12">
+          <use href="/main-icons-sprite.svg#arrow-right" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/sitemap">sitemap</a></h4>
+      <div><nav class="sitemap">
+  <ul class="sitemap__list">
+    <li class="sitemap__item">
+      <div class="sitemap__heading">Link Heading</div>
+      <ul class="sitemap__sublist">
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+      </ul>
+    </li>
+    <li class="sitemap__item">
+      <div class="sitemap__heading">Very Long Link Heading</div>
+      <ul class="sitemap__sublist">
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+      </ul>
+    </li>
+    <li class="sitemap__item">
+      <div class="sitemap__heading">Link Heading</div>
+      <ul class="sitemap__sublist">
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+      </ul>
+    </li>
+    <li class="sitemap__item">
+      <div class="sitemap__heading">Link Heading</div>
+      <ul class="sitemap__sublist">
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+        <li><a href="">Plain Text Link</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/tabs">tabs</a></h4>
+      <div><p-tabs :titles="['First Tab', 'Second Tab', 'Third Tab', 'Fourth Tab', 'Fifth Tab']">
+  <template #tabpanel-1>
+    <h3>Elit hic amet neque.</h3>
+    <p>Lorem nesciunt nemo excepturi aliquam asperiores sit repellat. Fugit libero enim quis vero harum Suscipit doloremque repellat est rerum id non Esse explicabo harum molestias quos corrupti nobis sit Voluptates</p>
+  </template>
+
+  <template #tabpanel-2>
+    <h3>Sit voluptas illo beatae.</h3>
+    <p>Ipsum eos quidem quae exercitationem distinctio. Deleniti exercitationem corrupti nihil porro consequuntur Repudiandae ut non libero expedita nulla? Autem obcaecati fugit blanditiis autem molestiae omnis? Similique odit eius eveniet veritatis.</p>
+  </template>
+
+  <template #tabpanel-3>
+    <h3>Consectetur odit distinctio beatae!</h3>
+    <p>Ipsum eaque ipsam asperiores consequatur est libero. Incidunt distinctio non quae veniam illum Laborum est harum sapiente vel suscipit maiores? Dicta quo velit eos ab distinctio, delectus! Autem sunt aperiam!</p>
+  </template>
+
+  <template #tabpanel-4>
+    <h3>Consectetur veniam iste consequuntur</h3>
+    <p>Elit laborum deleniti illo quidem tempora! Fugiat veritatis suscipit excepturi est odit ex? Adipisci sint quidem aliquid animi velit iure cupiditate Aliquam blanditiis quos culpa voluptatum velit Nemo cupiditate cupiditate</p>
+  </template>
+
+  <template #tabpanel-5>
+    <h3>Elit sed eligendi id!</h3>
+    <p>Ipsum placeat id architecto sapiente aliquid eaque! Itaque fugit animi necessitatibus aut incidunt Et eligendi error quis molestiae delectus Ut voluptate laudantium possimus corrupti tempora, veritatis! Veritatis facilis illo adipisci.</p>
+  </template>
+</p-tabs>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/tabs/tabs--solid">tabs--solid</a></h4>
+      <div><body style="background: #eee">
+  <p-tabs class="-solid" :titles="['Solid Tab Title', 'Solid Tab Title', 'Solid Tab Title']">
+    <template #tabpanel-1>
+      <h3>Lorem dolorem eum at</h3>
+      <p>Amet eveniet ipsum aliquam modi laborum Recusandae veniam provident nesciunt in consequuntur? Pariatur facere velit enim molestiae ad laboriosam. Molestiae veniam minus repudiandae tenetur eos Eaque tempora reiciendis nihil praesentium</p>
+    </template>
+
+    <template #tabpanel-2>
+      <h3>Adipisicing est corporis ea</h3>
+      <p>Sit quia modi adipisicing eaque soluta. Ullam recusandae laborum autem ipsam modi? Ea ullam repellat sed aliquam tenetur fugit Culpa fugit dolor qui nisi fugiat quis Velit consequatur id nam!</p>
+    </template>
+
+    <template #tabpanel-3>
+      <h3>Sit repudiandae beatae eaque</h3>
+      <p>Ipsum hic libero ab unde voluptatem odio Tenetur reprehenderit sunt delectus ipsam velit. Numquam saepe vero quisquam alias dolores Totam sequi deserunt quam quidem accusamus, id nulla, nemo repellendus animi.</p>
+    </template>
+  </p-tabs>
+</body>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/tabs/tabs--vertical">tabs--vertical</a></h4>
+      <div><p-tabs class="-vertical" :titles="['First Tab', 'Second Tab', 'Third Tab']">
+  <template #tabpanel-1>
+    <h5>Amet dignissimos laboriosam aspernatur!</h5>
+    <p>Elit vitae itaque repudiandae necessitatibus eligendi. Fugit quis voluptatibus explicabo fugiat consequuntur Atque distinctio quas pariatur beatae accusantium. Quo voluptatibus distinctio hic in quia. Nostrum pariatur neque libero error maxime?</p>
+  </template>
+
+  <template #tabpanel-2>
+    <h5>Amet libero veritatis illum.</h5>
+    <p>Ipsum dolorum illo laudantium modi corporis magni, amet Laborum laboriosam necessitatibus sed soluta eligendi. Odio in assumenda consequuntur temporibus dolor. Incidunt quia veniam illum inventore ipsum accusantium. Aperiam dolores itaque</p>
+  </template>
+
+  <template #tabpanel-3>
+    <h5>Dolor cupiditate quibusdam eveniet</h5>
+    <p>Consectetur odio tenetur voluptates nemo accusantium architecto, placeat. Minus incidunt a facere delectus modi? Ipsa ratione iste ab consectetur eveniet. Sapiente quisquam quaerat quod distinctio rerum explicabo Mollitia quam sequi?</p>
+  </template>
+</p-tabs>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/testimonial">testimonial</a></h4>
+      <div><blockquote class="testimonial">
+  <svg class="testimonial__icon icon accent-primary" role="presentation">
+    <use href="/main-icons-sprite.svg#quote" />
+  </svg>
+  <p class="testimonial__content">Suspendisse ac blandit nisi, non tempor purus. Pellentesque ornare tellus molestie quam pretium aliquet. Mauris eu est at velit cursus rutrum non sit amet turpis. Phasellus mauris est, fermentum sit amet tincidunt ultricies, egestas a ante proin et eros rutrum urna sollicitudin euismod non ut sem!</p>
+  <footer class="testimonial__footer">
+    <div class="testimonial__citationPhotoWrapper">
+      <img src="https://picsum.photos/400" alt="Placeholder photo" class="testimonial__citationPhoto" />
+    </div>
+    <cite class="testimonial__citation">
+      Firstnamerson Lastname
+      <span class="testimonial__citationTitle"> Director of Important Titles, CorporateCorp </span>
+    </cite>
+  </footer>
+</blockquote>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/testimonial/testimonial--aside">testimonial--aside</a></h4>
+      <div><blockquote class="testimonial -aside">
+  <p class="testimonial__content">Suspendisse ac blandit nisi, non tempor purus. Pellentesque ornare tellus molestie quam pretium aliquet. Mauris eu est at velit cursus rutrum non sit amet turpis. Phasellus mauris est, fermentum sit amet tincidunt ultricies, egestas a ante proin et eros rutrum urna sollicitudin euismod non ut sem!</p>
+  <footer class="testimonial__footer">
+    <div class="testimonial__citationPhotoWrapper">
+      <img src="https://picsum.photos/400" alt="Placeholder photo" class="testimonial__citationPhoto" />
+    </div>
+    <cite class="testimonial__citation">
+      Firstnamerson Lastname
+      <span class="testimonial__citationTitle"> Director of Important Titles, CorporateCorp </span>
+    </cite>
+  </footer>
+</blockquote>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/molecules/testimonial/testimonial--featured">testimonial--featured</a></h4>
+      <div><blockquote class="testimonial -featured">
+  <svg class="testimonial__icon icon" role="presentation">
+    <use href="/main-icons-sprite.svg#quote" />
+  </svg>
+  <p class="testimonial__content">Suspendisse ac blandit nisi, non tempor purus. Pellentesque ornare tellus molestie quam pretium aliquet. Mauris eu est at velit cursus rutrum non sit amet turpis. Phasellus mauris est, fermentum sit amet tincidunt ultricies, egestas a ante proin et eros rutrum urna sollicitudin euismod non ut sem!</p>
+  <footer class="testimonial__footer">
+    <div class="testimonial__citationPhotoWrapper">
+      <img src="https://picsum.photos/400" alt="Placeholder photo" class="testimonial__citationPhoto" />
+    </div>
+    <cite class="testimonial__citation">
+      Firstnamerson Lastname
+      <span class="testimonial__citationTitle"> Director of Important Titles, CorporateCorp </span>
+    </cite>
+  </footer>
+</blockquote>
+</div>
+    </div>
+    </div>
+    <link rel="stylesheet" href="/resources/styles/index.scss">
+<script type="module" src="/resources/js/index.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,72 @@
+@use '@/core' as *;
+
+.featureVideo {
+  color: var(--accent-color-text);
+  display: grid;
+  gap: #{fluid-rems(1.5, 2)};
+  padding: 0 #{fluid-rems(1.5, 2, 2.5)} #{fluid-rems(2.5, 3, 4.5)};
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr auto;
+
+  > * {
+    grid-column: 1;
+  }
+
+  &__media {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    min-width: 0;
+    grid-row: 1 / 3;
+    z-index: 2;
+
+    .media {
+      margin: 0;
+      width: 100%;
+      min-width: 200px;
+      overflow: hidden;
+
+      @include at(md) {
+        width: min(100%, 80%);
+      }
+    }
+
+    .media__mask img,
+    .media__content,
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 16px 64px 0 rgb(0 0 0 / 0.05);
+    }
+  }
+
+  &__background {
+    background: var(--accent-color);
+    grid-row: 2 / -1;
+    z-index: 0;
+  }
+
+  &__content {
+    display: grid;
+    gap: 0.75rem;
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 1rem #{fluid-rems(1.5, 3, 4)};
+    align-self: start;
+    grid-row: 3 / -1;
+    z-index: 1;
+  }
+
+  &__title,
+  &__text {
+    margin: 0;
+  }
+}

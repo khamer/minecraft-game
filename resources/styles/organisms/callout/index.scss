@@ -1,0 +1,37 @@
+.callout {
+  text-align: center;
+
+  &__title {
+    justify-self: center;
+    text-align: center;
+  }
+
+  &__content {
+    text-wrap: balance;
+  }
+
+  &__actions {
+    justify-self: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .grid {
+    align-items: center;
+  }
+
+  // When buttons have accent-white, use the section's accent color for text
+  &.accent-secondary {
+    .button.accent-white {
+      --accent-color-text: var(--color-blue);
+    }
+  }
+
+  &.accent-tertiary {
+    .button.accent-white {
+      --accent-color-text: var(--color-aqua);
+    }
+  }
+}

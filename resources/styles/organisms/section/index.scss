@@ -1,0 +1,12 @@
+.section {
+  --accent-color: #ffffff;
+
+  row-gap: 16px;
+  padding: 5rem 0;
+  background: var(--accent-color);
+  color: var(--accent-color-text);
+
+  .container {
+    row-gap: 16px;
+  }
+}

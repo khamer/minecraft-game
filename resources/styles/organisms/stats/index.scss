@@ -1,0 +1,104 @@
+@use '@/core' as *;
+
+.stats {
+  $b: &;
+
+  background-color: var(--color-gray-50);
+
+  &__content {
+    --columns: 1;
+    --gap: var(--root-gap, 16px);
+
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(var(--columns, 1), minmax(0, 1fr));
+
+    @include at(md) {
+      --columns: 2;
+    }
+
+    @include at(lg) {
+      --columns: 3;
+    }
+
+    > * {
+      min-width: 0;
+    }
+  }
+
+  // When inside container, position within container's grid
+  .container > &__content {
+    grid-column: main / main;
+  }
+
+  &__stat {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+  }
+
+  &__icon {
+    width: 5rem;
+  }
+
+  &__value {
+    font-size: fluid-rems(2, 3, 4);
+    font-weight: 700;
+    line-height: 1.125;
+  }
+
+  &.-tiles {
+    #{$b}__content {
+      @include at(md) {
+        --columns: 2;
+      }
+
+      @include at(lg) {
+        --columns: 4;
+      }
+    }
+  }
+
+  &__grid {
+    // Grid wrapper for -withCallout variant
+    display: grid;
+    gap: var(--root-gap, 16px);
+    align-items: center;
+  }
+
+  .container > &__grid {
+    grid-column: main / main;
+  }
+
+  &.-withCallout {
+    #{$b}__grid {
+      @include at(lg) {
+        --columns: 3;
+
+        grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr));
+      }
+    }
+
+    #{$b}__callout {
+      justify-items: center;
+      text-align: center;
+
+      @include at(lg) {
+        justify-items: start;
+        text-align: left;
+        grid-column: span 1;
+      }
+    }
+
+    #{$b}__content {
+      @include at(lg) {
+        grid-column: span 2;
+        display: grid;
+        grid: auto / subgrid;
+      }
+    }
+  }
+}

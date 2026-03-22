@@ -1,0 +1,842 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>atoms</title>
+    <!-- Using Vitrine's builtin template -->
+  </head>
+  <body>
+    <div id="app">
+      <div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/breadcrumbs">breadcrumbs</a></h4>
+      <div><nav aria-label="Breadcrumb" class="breadcrumbs">
+  <ol class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="#">
+        <svg class="breadcrumbs__icon" viewBox="0 0 14 13"><use href="/main-icons-sprite.svg#home" /></svg>
+        Home
+      </a>
+    </li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Level 1</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Level 2</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Level 3</a></li>
+    <li class="breadcrumbs__item">Level 4</li>
+  </ol>
+</nav>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/button">button</a></h4>
+      <div><div class="actions">
+  <button class="button">Button</button>
+  <button class="button">
+    <svg class="button__icon"><use href="/main-icons-sprite.svg#layers" /></svg>
+    Button
+  </button>
+  <button disabled class="button">Button</button>
+</div>
+
+<h5>.-outline</h5>
+
+<div class="actions">
+  <button class="button -outline">Button</button>
+  <button class="button -outline">
+    Button
+    <svg class="button__icon"><use href="/main-icons-sprite.svg#layers" /></svg>
+  </button>
+  <button disabled class="button -outline">Button</button>
+</div>
+
+<h5>.-outline-fill</h5>
+
+<div class="actions">
+  <button class="button -outline-fill">Button</button>
+  <button class="button -outline-fill">
+    Button
+    <svg class="button__icon"><use href="/main-icons-sprite.svg#layers" /></svg>
+  </button>
+  <button disabled class="button -outline-fill">Button</button>
+</div>
+
+<h5>.-ghost</h5>
+
+<div class="actions">
+  <button class="button -ghost">Button</button>
+  <button class="button -ghost">
+    <svg class="button__icon"><use href="/main-icons-sprite.svg#layers" /></svg>
+    Button
+  </button>
+  <button disabled class="button -ghost">Button</button>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/button/button--icon">button--icon</a></h4>
+      <div><div class="actions">
+  <button class="button -square">
+    <span class="srOnly">up</span>
+    <svg class="button__icon"><use href="/main-icons-sprite.svg#chevron-up" /></svg>
+  </button>
+  <button class="button -square -outline">
+    <span class="srOnly">down</span>
+    <svg class="button__icon"><use href="/main-icons-sprite.svg#chevron-down" /></svg>
+  </button>
+  <button class="button -circle">
+    <span class="srOnly">left</span>
+    <svg class="button__icon"><use href="/main-icons-sprite.svg#chevron-left" /></svg>
+  </button>
+  <button class="button -circle -ghost">
+    <span class="srOnly">right</span>
+    <svg class="button__icon"><use href="/main-icons-sprite.svg#chevron-right" /></svg>
+  </button>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/button/button--messaging">button--messaging</a></h4>
+      <div><div class="actions">
+  <button class="button error">Error</button>
+  <button class="button -outline error">Error</button>
+  <button class="button -outline-fill error">Error</button>
+  <button class="button -ghost error">Error</button>
+</div>
+
+<div class="actions">
+  <button class="button warning">Warning</button>
+  <button class="button -outline warning">Warning</button>
+  <button class="button -outline-fill warning">Warning</button>
+  <button class="button -ghost warning">Warning</button>
+</div>
+
+<div class="actions">
+  <button class="button success">Success</button>
+  <button class="button -outline success">Success</button>
+  <button class="button -outline-fill success">Success</button>
+  <button class="button -ghost success">Success</button>
+</div>
+
+<div class="actions">
+  <button class="button info">Info</button>
+  <button class="button -outline info">Info</button>
+  <button class="button -outline-fill info">Info</button>
+  <button class="button -ghost info">Info</button>
+</div>
+
+<div class="actions" style="background: black; padding: 1rem">
+  <button class="button -outline-fill accent-white">White</button>
+  <button class="button -ghost accent-white">White</button>
+</div>
+
+<div class="actions">
+  <button class="button -outline-fill accent-black">Black</button>
+  <button class="button -ghost accent-black">Black</button>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/button/button-on-primary">button-on-primary</a></h4>
+      <div><div style="background: var(--accent-color); padding: 1rem">
+  <div class="actions">
+    <button class="button error">Error</button>
+    <button class="button -outline error">Error</button>
+    <button class="button -outline-fill error">Error</button>
+    <button class="button -ghost error">Error</button>
+  </div>
+
+  <div class="actions">
+    <button class="button warning">Warning</button>
+    <button class="button -outline warning">Warning</button>
+    <button class="button -outline-fill warning">Warning</button>
+    <button class="button -ghost warning">Warning</button>
+  </div>
+
+  <div class="actions">
+    <button class="button success">Success</button>
+    <button class="button -outline success">Success</button>
+    <button class="button -outline-fill success">Success</button>
+    <button class="button -ghost success">Success</button>
+  </div>
+
+  <div class="actions">
+    <button class="button info">Info</button>
+    <button class="button -outline info">Info</button>
+    <button class="button -outline-fill info">Info</button>
+    <button class="button -ghost info">Info</button>
+  </div>
+
+  <div class="actions">
+    <button class="button -outline-fill accent-white">White</button>
+    <button class="button -ghost accent-white">White</button>
+  </div>
+
+  <div class="actions">
+    <button class="button -outline-fill accent-black">Black</button>
+    <button class="button -ghost accent-black">Black</button>
+  </div>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/checkbox">checkbox</a></h4>
+      <div><label class="field -inline" for="checkbox-default">
+  <input class="checkbox" type="checkbox" id="checkbox-default" />
+  Checkbox
+</label>
+
+<label class="field -inline" for="checkbox-checked">
+  <input class="checkbox" type="checkbox" checked id="checkbox-checked" />
+  Checked
+</label>
+
+<label class="field -inline" for="checkbox-disabled">
+  <input class="checkbox" type="checkbox" disabled id="checkbox-disabled" />
+  Disabled
+</label>
+
+<label class="field -inline" for="checkbox-checked-disabled">
+  <input class="checkbox" type="checkbox" checked disabled id="checkbox-checked-disabled" />
+  Checked Disabled
+</label>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/dropdown">dropdown</a></h4>
+      <div><p-openable class="link" label="Default Dropdown" :close-on-blur="false">
+  <template #toggle>
+    Dropdown
+    <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#chevron-down" /></svg>
+  </template>
+  <template id="default">
+    <div class="dropdown" v-directionals>
+      <ul class="dropdown__list">
+        <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+        <li class="dropdown__item"><a href="" class="dropdown__link">Consectetur asperiores</a></li>
+        <li class="dropdown__item"><a href="" class="dropdown__link">Amet porro.</a></li>
+        <li class="dropdown__item"><a href="" class="dropdown__link">Ipsum dolorem</a></li>
+      </ul>
+    </div>
+  </template>
+</p-openable>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/eyebrow">eyebrow</a></h4>
+      <div><span class="eyebrow">Eyebrow</span> <span class="eyebrow -fill">Eyebrow .-fill</span>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/heading">heading</a></h4>
+      <div><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/icon">icon</a></h4>
+      <div><div style="display: grid; grid: 2rem / repeat(auto-fit, 2rem minmax(10rem, 1fr)); gap: 1rem 0.5rem">
+  <svg class="icon"><use href="/main-icons-sprite.svg#arrow-left" /></svg>
+  arrow-left
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#arrow-right" /></svg>
+  arrow-right
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#bullet-thin" /></svg>
+  bullet-thin
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#bullet" /></svg>
+  bullet
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#check" /></svg>
+  check
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#info" /></svg>
+  info
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#error" /></svg>
+  error
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#chevron-down" /></svg>
+  chevron-down
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#chevron-left" /></svg>
+  chevron-left
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#chevron-right" /></svg>
+  chevron-right
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#chevron-up" /></svg>
+  chevron-up
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#clock" /></svg>
+  clock
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#close" /></svg>
+  close
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#facebook" /></svg>
+  facebook
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#home" /></svg>
+  home
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#instagram" /></svg>
+  instagram
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#layers" /></svg>
+  layers
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#linkedin" /></svg>
+  linkedin
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#minus" /></svg>
+  minus
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#play" /></svg>
+  play
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#quote" /></svg>
+  quote
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#search" /></svg>
+  search
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#tag" /></svg>
+  tag
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#x" /></svg>
+  x
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#youtube" /></svg>
+  youtube
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#date" /></svg>
+  date
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#location" /></svg>
+  location
+
+  <svg class="icon"><use href="/main-icons-sprite.svg#bars" /></svg>
+  bars
+
+  <svg class="icon -circle"><use href="/main-icons-sprite.svg#check" /></svg>
+  check.-circle
+
+  <svg class="icon -circle"><use href="/main-icons-sprite.svg#minus" /></svg>
+  minus.-circle
+
+  <svg class="icon -circle"><use href="/main-icons-sprite.svg#play" /></svg>
+  play.-circle
+
+  <svg class="icon -circle"><use href="/main-icons-sprite.svg#chevron-down" /></svg>
+  chevron-down.-circle
+
+  <svg class="icon -circle success"><use href="/main-icons-sprite.svg#check" /></svg>
+  check.-circle.success
+
+  <svg class="icon -circle info"><use href="/main-icons-sprite.svg#info" /></svg>
+  info.-circle.info
+
+  <svg class="icon -circle warning"><use href="/main-icons-sprite.svg#error" /></svg>
+  warning.-circle.warning
+
+  <svg class="icon -circle error"><use href="/main-icons-sprite.svg#error" /></svg>
+  error.-circle.error
+
+  <svg class="icon -square success"><use href="/main-icons-sprite.svg#check" /></svg>
+  check.-square.success
+
+  <svg class="icon -square info"><use href="/main-icons-sprite.svg#info" /></svg>
+  info.-square.info
+
+  <svg class="icon -square warning"><use href="/main-icons-sprite.svg#error" /></svg>
+  warning.-square.warning
+
+  <svg class="icon -square error"><use href="/main-icons-sprite.svg#error" /></svg>
+  error.-square.error
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/input">input</a></h4>
+      <div><div class="field">
+  <input class="input" type="text" value="text field" />
+</div>
+<div class="field">
+  <input disabled class="input" type="text" value="disabled text field" />
+</div>
+
+<div class="field">
+  <input class="input" type="text" placeholder="address@domain.com" />
+</div>
+<div class="field">
+  <input class="input" type="date" />
+</div>
+<div class="field">
+  <input class="input" type="password" placeholder="password field" />
+</div>
+<div class="field">
+  <input class="input" type="number" placeholder="number field" />
+</div>
+<div class="field">
+  <input class="input" type="file" />
+</div>
+
+<div class="field">
+  <textarea class="input" cols="30" rows="10"></textarea>
+</div>
+
+<div class="field">
+  <input class="input error" type="text" value="invalid value" />
+</div>
+
+<div class="field">
+  <div class="input">Fake input</div>
+</div>
+
+<div class="field">
+  <div class="input -disabled">Fake disabled input</div>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/link">link</a></h4>
+      <div>This is a <a href="#">regular link with no class,</a> it is regular. <br />
+
+<a class="link" href="#">
+  Standalone Text Link
+  <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-right" /></svg>
+</a>
+<br />
+
+Adipisicing eius quis perferendis dicta aut aliquid Autem pariatur harum nesciunt dicta recusandae. Libero molestiae fugit totam odio cumque commodi. Provident earum quis magni excepturi porro nemo?
+<a class="link" href=""
+  >Praesentium ex architecto <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-right" /></svg
+></a>
+
+<ul>
+  <li>
+    <a class="-wide accent-primary" href="#">
+      Primary Text Link
+      <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-right" /></svg>
+    </a>
+  </li>
+  <li>
+    <a class="-wide info" href="#">
+      <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-left" /></svg>
+      Info Text Link
+    </a>
+  </li>
+  <li>
+    <a class="-wide warning" href="#">
+      Warning Text Link
+      <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-right" /></svg>
+    </a>
+  </li>
+  <li>
+    <a class="-wide error" href="#">
+      <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-left" /></svg>
+      Error Text Link
+    </a>
+  </li>
+  <li>
+    <a class="-wide success" href="#">
+      Success Text Link
+      <svg viewBox="0 0 18 12"><use href="/main-icons-sprite.svg#arrow-right" /></svg>
+    </a>
+  </li>
+</ul>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/media">media</a></h4>
+      <div><div class="media">
+  <p-lazy>
+    <video class="media__content" inert controls autoplay playsinline>
+      <source data-src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <template #placeholder="{ load, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <img srcset="https://unsplash.it/320/176?random&gravity=center" alt="" width="320" height="176" />
+      </picture>
+      <button class="media__trigger" @click="load" :class="modifier">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+  </p-lazy>
+</div>
+
+<div class="media">
+  <p-lazy>
+    <video inert controls autoplay playsinline>
+      <source data-src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <template #placeholder="{ load, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <source srcset="https://unsplash.it/320/176?random&gravity=center" media="(min-width: 768px)" />
+        <source srcset="https://unsplash.it/320/176?random&gravity=center" media="(min-width: 480px)" />
+        <img class="lazyload" srcset="https://unsplash.it/320/176?random&gravity=center" alt="" width="320" height="176" />
+      </picture>
+      <button class="media__trigger" :class="modifier" @click="load">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle -light" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+  </p-lazy>
+</div>
+
+<br />
+
+<div class="media">
+  <p-lazy>
+    <iframe data-src="https://player.vimeo.com/video/818944000?h=e8674039c8&autoplay=1&title=0&byline=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <template #placeholder="{ load, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <source srcset="https://unsplash.it/267/150?random&gravity=center" media="(min-width: 768px)" />
+        <source srcset="https://unsplash.it/267/150?random&gravity=center" media="(min-width: 480px)" />
+        <img class="lazyload" srcset="https://unsplash.it/267/150?random&gravity=center" alt="" width="267" height="150" />
+      </picture>
+      <button class="media__trigger" :class="modifier" @click="load">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+  </p-lazy>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/media/media-PWistia">media-PWistia</a></h4>
+      <div><div class="media">
+  <p-wistia>
+    <template #placeholder="{ playPause, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <source srcset="https://unsplash.it/300/150?random&gravity=center" media="(min-width: 768px)" />
+        <source srcset="https://unsplash.it/267/150?random&gravity=center" media="(min-width: 480px)" />
+        <img class="lazyload" srcset="https://unsplash.it/267/150?random&gravity=center" alt="" width="267" height="150" />
+      </picture>
+      <button class="media__trigger" :class="modifier" @click="playPause">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+    <iframe src="https://fast.wistia.net/embed/iframe/30q7n48g4f?autoplay=true" allowfullscreen tabindex="-1"></iframe>
+  </p-wistia>
+</div>
+
+<h5>media__trigger -keepVisible</h5>
+
+<div class="media">
+  <p-wistia>
+    <template #placeholder="{ playPause, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <source srcset="https://unsplash.it/300/150?random&gravity=center" media="(min-width: 768px)" />
+        <source srcset="https://unsplash.it/267/150?random&gravity=center" media="(min-width: 480px)" />
+        <img class="lazyload" srcset="https://unsplash.it/267/150?random&gravity=center" alt="" width="267" height="150" />
+      </picture>
+      <button class="media__trigger -keepVisible" :class="modifier" @click="playPause">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+    <iframe src="https://fast.wistia.net/embed/iframe/30q7n48g4f?autoplay=true" allowfullscreen tabindex="-1"></iframe>
+  </p-wistia>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/media/media-PYouTube">media-PYouTube</a></h4>
+      <div><div class="media">
+  <p-you-tube>
+    <template #placeholder="{ playPause, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <source srcset="https://unsplash.it/300/150?random&gravity=center" media="(min-width: 768px)" />
+        <source srcset="https://unsplash.it/267/150?random&gravity=center" media="(min-width: 480px)" />
+        <img class="lazyload" srcset="https://unsplash.it/267/150?random&gravity=center" alt="" width="267" height="150" />
+      </picture>
+      <button class="media__trigger" :class="modifier" @click="playPause">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+    <iframe src="//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1&html5=1" allowfullscreen tabindex="-1"></iframe>
+  </p-you-tube>
+</div>
+
+<h5>media__trigger -keepVisible</h5>
+
+<div class="media">
+  <p-you-tube>
+    <template #placeholder="{ playPause, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <source srcset="https://unsplash.it/300/150?random&gravity=center" media="(min-width: 768px)" />
+        <source srcset="https://unsplash.it/267/150?random&gravity=center" media="(min-width: 480px)" />
+        <img class="lazyload" srcset="https://unsplash.it/267/150?random&gravity=center" alt="" width="267" height="150" />
+      </picture>
+      <button class="media__trigger -keepVisible" :class="modifier" @click="playPause">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+    <iframe src="//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1&html5=1" allowfullscreen tabindex="-1"></iframe>
+  </p-you-tube>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/media/media-PYouTubePlaylist">media-PYouTubePlaylist</a></h4>
+      <div><div class="media">
+  <p-you-tube-playlist>
+    <template #placeholder="{ playPause, modifier }">
+      <picture class="media__mask" :class="modifier">
+        <source srcset="https://unsplash.it/300/150?random&gravity=center" media="(min-width: 768px)" />
+        <source srcset="https://unsplash.it/267/150?random&gravity=center" media="(min-width: 480px)" />
+        <img class="lazyload" srcset="https://unsplash.it/267/150?random&gravity=center" alt="" width="267" height="150" />
+      </picture>
+      <button class="media__trigger" :class="modifier" @click="playPause">
+        <span class="srOnly">play</span>
+        <svg class="media__icon icon -circle" viewBox="0 0 96 96"><use href="/main-icons-sprite.svg#play" /></svg>
+      </button>
+    </template>
+    <iframe width="267" height="150" src="https://www.youtube.com/embed/videoseries?list=PLDA8A802CB81B6868" title="Embedded YouTube playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen tabindex="-1"></iframe>
+  </p-you-tube-playlist>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/radio">radio</a></h4>
+      <div><div style="display: flex; flex-wrap: wrap; gap: 1rem">
+  <label for="one" class="field -inline">
+    <input type="radio" name="radio-group" id="one" checked />
+    Checked
+  </label>
+
+  <label for="two" class="field -inline">
+    <input type="radio" name="radio-group" id="two" />
+    Unchecked
+  </label>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+  <label for="three" class="field -inline">
+    <input type="radio" name="radio-group-2" id="three" disabled />
+    Disabled
+  </label>
+
+  <label for="four" class="field -inline">
+    <input type="radio" name="radio-group-2" id="four" checked disabled />
+    Disabled Checked
+  </label>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+  <label for="five" class="field">
+    <input type="radio" name="radio-group-3" id="five" />
+    Radio Above Label
+  </label>
+
+  <label for="six" class="field">
+    <input type="radio" name="radio-group-3" id="six" />
+    Radio Above Label
+  </label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+  <label for="seven" class="field">
+    Radio Below Label
+    <input type="radio" name="radio-group-3" id="seven" />
+  </label>
+
+  <label for="eight" class="field">
+    Radio Below Label
+    <input type="radio" name="radio-group-3" id="eight" />
+  </label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+  <label for="nine" class="field -inline -reversed">
+    <input type="radio" name="radio-group-3" id="nine" />
+    Radio After Label
+  </label>
+
+  <label for="ten" class="field -inline -reversed">
+    <input type="radio" name="radio-group-3" id="ten" />
+    Radio After Label
+  </label>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/search">search</a></h4>
+      <div><div class="search">
+  <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"></path></svg>
+  <input class="search__input input" type="search" placeholder="Search for..." />
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/select">select</a></h4>
+      <div><div class="select">
+  <select class="select__input">
+    <option class="select__placeholder" selected disabled>Select an option</option>
+    <option value="">Lorem</option>
+    <option value="">Ipsum</option>
+    <option value="">Dolor</option>
+    <option value="">Kismet</option>
+  </select>
+</div>
+
+&nbsp;
+
+<div class="select accent-secondary">
+  <select class="select__input">
+    <option class="select__placeholder" selected disabled>Select an option</option>
+    <option value="">Lorem</option>
+    <option value="">Ipsum</option>
+    <option value="">Dolor</option>
+    <option value="">Kismet</option>
+  </select>
+</div>
+
+<p-select :options="['Canada', 'United States']" placeholder="Select an option"></p-select>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/switch">switch</a></h4>
+      <div><div style="display: flex; flex-wrap: wrap; gap: 1rem">
+  <label for="switch-active" class="field -inline">
+    <input type="checkbox" class="switch" role="switch" id="switch-active" checked />
+    Active Switch
+  </label>
+
+  <label for="switch-inactive" class="field -inline">
+    <input type="checkbox" class="switch" role="switch" id="switch-inactive" />
+    Inactive Switch
+  </label>
+
+  <label for="switch-disabled" class="field -inline">
+    <input type="checkbox" class="switch" role="switch" id="switch-disabled" disabled />
+    Disabled Switch
+  </label>
+
+  <label for="switch-disabled-active" class="field -inline">
+    <input type="checkbox" class="switch" role="switch" id="switch-disabled-active" disabled checked />
+    Disabled Active Switch
+  </label>
+</div>
+</div>
+    </div>
+<div style="margin-bottom: 3rem">
+      <h4><a target="_parent" href="/components/styles/atoms/tag">tag</a></h4>
+      <div><div class="actions">
+  <!-- .tag class on <div> element ------------------->
+  <div class="tag accent-secondary">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+    .tag class on div
+  </div>
+
+  <div class="tag -active accent-secondary">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+    Active Tag
+  </div>
+
+  <!-- Inactive Tag -->
+  <div class="tag -inactive accent-secondary">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+    Inactive Tag
+  </div>
+
+  <!-- Button Tag -->
+  <button class="tag accent-secondary">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+    Button Tag
+  </button>
+</div>
+
+<div class="actions">
+  <!-- Checkbox Tag -->
+  <label class="tag field -inline accent-secondary" for="tag-checkbox-inactive">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+
+    Unchecked Checkbox Tag
+    <input class="tag__input" type="checkbox" id="tag-checkbox-inactive" />
+  </label>
+
+  <label class="tag field -inline accent-secondary" for="tag-checkbox-active">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+
+    Checked Checkbox Tag
+    <input class="tag__input" type="checkbox" id="tag-checkbox-active" checked />
+  </label>
+
+  <!-- Dismissable Tag -->
+  <label class="tag field -inline -dismissable accent-secondary" for="tag-checkbox-dismissable">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+      <use href="/main-icons-sprite.svg#close" />
+    </svg>
+    Dissmissable Checkbox Tag
+    <input class="tag__input" type="checkbox" id="tag-checkbox-dismissable" checked />
+  </label>
+
+  <label class="tag field -inline accent-secondary" for="tag-checkbox-disabled">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+
+    Disabled Checkbox Tag
+    <input class="tag__input" type="checkbox" id="tag-checkbox-disabled" disabled />
+  </label>
+</div>
+
+<!-- Radio Tag -->
+<div class="actions">
+  <!-- <tag> element for radio input -->
+  <label class="tag field -inline accent-secondary" for="tag-radio-inactive">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+    Inactive Radio Tag
+    <input class="tag__input" type="radio" name="radio-tag-group" id="tag-radio-inactive" />
+  </label>
+
+  <!-- .tag class on <label> element for radio input -->
+  <label class="tag field -inline accent-secondary" for="tag-radio-active">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+    Active Radio Tag
+    <input class="tag__input" type="radio" name="radio-tag-group" id="tag-radio-active" checked />
+  </label>
+
+  <!-- disabled tag for radio input -->
+  <label class="tag field -inline accent-secondary" for="tag-radio-disabled">
+    <svg class="tag__icon">
+      <use href="/main-icons-sprite.svg#tag" />
+    </svg>
+    Disabled Radio Tag
+    <input class="tag__input" type="radio" name="radio-tag-group" id="tag-radio-disabled" disabled />
+  </label>
+</div>
+</div>
+    </div>
+    </div>
+    <link rel="stylesheet" href="/resources/styles/index.scss">
+<script type="module" src="/resources/js/index.js"></script>
+  </body>
+  </html>
