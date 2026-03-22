@@ -3,7 +3,7 @@
   <div
     class="item"
     :class="{ checked: checked, nether: item.pool === 'nether' }"
-    @click="$emit('toggle')"
+    @click="$emit('toggle', item.id)"
   >
     <img
       :src="'/textures/' + item.texture"
