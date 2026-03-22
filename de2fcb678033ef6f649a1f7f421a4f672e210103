@@ -1,0 +1,23 @@
+resources/js/components/MinecraftPuzzler.vue
+  edcf5e7f357463d5 8,97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15",
+  "base_commit_sha": "de2fcb678033ef6f649a1f7f421a4f672e210103",
+  "prompts": {
+    "edcf5e7f357463d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ea67ce87-443a-407f-97a0-680be35d398c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Kevin Hamer <kevin@imarc.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
