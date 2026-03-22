@@ -12,6 +12,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: [
+        './index.html',
         './resources/styles/index.scss',
         './resources/js/index.js',
         './public/main-icons-sprite.svg',
