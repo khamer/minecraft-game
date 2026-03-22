@@ -35,7 +35,10 @@ const checkedIds  = ref(new Set())
 
 // Computed
 const currentItems = computed(() => stageArrays.value[stage.value - 1] ?? [])
-const allChecked   = computed(() => checkedIds.value.size === currentItems.value.length)
+const allChecked   = computed(() =>
+  currentItems.value.length > 0 &&
+  checkedIds.value.size === currentItems.value.length
+)
 
 function toggleItem(id) {
   const next = new Set(checkedIds.value)
