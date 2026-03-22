@@ -51,6 +51,9 @@ export default {
 .item:hover {
   border-color: #888;
 }
+.item.nether:hover {
+  border-color: #b52222;
+}
 .item.nether {
   border-color: #8B1A1A;
   background: #2a1a1a;
