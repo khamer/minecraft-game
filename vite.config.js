@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vitrine from '@imarc/vitrine'
+import path from 'path'
+import { pathToFileURL } from 'url'
 
 export default defineConfig({
   publicDir: './public',
@@ -45,6 +47,18 @@ export default defineConfig({
       ],
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        importers: [{
+          findFileUrl(url) {
+            if (!url.startsWith('@/')) return null
+            return pathToFileURL(path.resolve('./resources/styles', url.slice(2)))
+          }
+        }]
+      }
+    }
+  },
   resolve: {
     alias: {
       'vue': 'vue/dist/vue.esm-bundler.js'
