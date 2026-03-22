@@ -1,0 +1,23 @@
+resources/js/components/GameBoard.vue
+  edcf5e7f357463d5 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15",
+  "base_commit_sha": "a05b078008c88290afd29515b0a7166bf672eebe",
+  "prompts": {
+    "edcf5e7f357463d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ea67ce87-443a-407f-97a0-680be35d398c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Kevin Hamer <kevin@imarc.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
