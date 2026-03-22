@@ -1,0 +1,23 @@
+vite.config.js
+  edcf5e7f357463d5 4-5,50-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15",
+  "base_commit_sha": "b4292c9cc994af39d97d67a8ce664d7a079b4770",
+  "prompts": {
+    "edcf5e7f357463d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ea67ce87-443a-407f-97a0-680be35d398c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Kevin Hamer <kevin@imarc.com>",
+      "messages": [],
+      "total_additions": 14,
+      "total_deletions": 0,
+      "accepted_lines": 14,
+      "overriden_lines": 0
+    }
+  }
+}
