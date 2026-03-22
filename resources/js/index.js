@@ -21,6 +21,7 @@ createApp({
     PYouTube: defineAsyncComponent(() => import('./components/PYouTube.vue')),
     PYouTubePlaylist: defineAsyncComponent(() => import('./components/PYouTubePlaylist.vue')),
     PWistia: defineAsyncComponent(() => import('./components/PWistia.vue')),
+    MinecraftPuzzler: defineAsyncComponent(() => import('./components/MinecraftPuzzler.vue')),
   },
   directives: {
     directionals,
