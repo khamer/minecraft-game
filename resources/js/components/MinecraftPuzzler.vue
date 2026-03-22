@@ -5,6 +5,7 @@
       <div class="puzzler-title">PUZZLER</div>
 
       <!-- Game board -->
+      <!-- v-if guard ensures GameBoard only receives numeric stage values (1|2|3) -->
       <GameBoard
         v-if="stage !== 'success'"
         :items="currentItems"
@@ -93,6 +94,7 @@ export default {
   letter-spacing: 2px;
   padding: 10px 28px;
   cursor: pointer;
+  transition: background 0.1s;
 }
 .btn-again:hover {
   background: #9a5a9a;
