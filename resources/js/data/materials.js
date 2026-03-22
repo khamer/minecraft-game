@@ -17,7 +17,6 @@ export const OVERWORLD_POOL = [
   { id: 'cracked_stone_bricks',     name: 'Cracked Stone Bricks',     texture: 'cracked_stone_bricks.png',       pool: 'overworld' },
   { id: 'chiseled_stone_bricks',    name: 'Chiseled Stone Bricks',    texture: 'chiseled_stone_bricks.png',      pool: 'overworld' },
   { id: 'smooth_stone',             name: 'Smooth Stone',             texture: 'smooth_stone.png',               pool: 'overworld' },
-  { id: 'calcite',                  name: 'Calcite',                  texture: 'calcite.png',                    pool: 'overworld' },
   { id: 'tuff',                     name: 'Tuff',                     texture: 'tuff.png',                       pool: 'overworld' },
   { id: 'tuff_bricks',              name: 'Tuff Bricks',              texture: 'tuff_bricks.png',                pool: 'overworld' },
   { id: 'polished_tuff',            name: 'Polished Tuff',            texture: 'polished_tuff.png',              pool: 'overworld' },
@@ -38,7 +37,6 @@ export const OVERWORLD_POOL = [
   { id: 'polished_tuff_wall',       name: 'Polished Tuff Wall',       texture: 'polished_tuff.png',              pool: 'overworld' },
 
   // --- Deepslate family ---
-  { id: 'deepslate',                       name: 'Deepslate',                       texture: 'deepslate_top.png',                    pool: 'overworld' },
   { id: 'cobbled_deepslate',               name: 'Cobbled Deepslate',               texture: 'cobbled_deepslate.png',                pool: 'overworld' },
   { id: 'polished_deepslate',              name: 'Polished Deepslate',              texture: 'polished_deepslate.png',               pool: 'overworld' },
   { id: 'deepslate_bricks',               name: 'Deepslate Bricks',               texture: 'deepslate_bricks.png',                 pool: 'overworld' },
@@ -46,7 +44,6 @@ export const OVERWORLD_POOL = [
   { id: 'deepslate_tiles',                name: 'Deepslate Tiles',                texture: 'deepslate_tiles.png',                  pool: 'overworld' },
   { id: 'cracked_deepslate_tiles',        name: 'Cracked Deepslate Tiles',        texture: 'cracked_deepslate_tiles.png',          pool: 'overworld' },
   { id: 'chiseled_deepslate',             name: 'Chiseled Deepslate',             texture: 'chiseled_deepslate.png',               pool: 'overworld' },
-  { id: 'reinforced_deepslate',           name: 'Reinforced Deepslate',           texture: 'reinforced_deepslate_top.png',         pool: 'overworld' },
   { id: 'cobbled_deepslate_slab',         name: 'Cobbled Deepslate Slab',         texture: 'cobbled_deepslate.png',                pool: 'overworld' },
   { id: 'cobbled_deepslate_stairs',       name: 'Cobbled Deepslate Stairs',       texture: 'cobbled_deepslate.png',                pool: 'overworld' },
   { id: 'cobbled_deepslate_wall',         name: 'Cobbled Deepslate Wall',         texture: 'cobbled_deepslate.png',                pool: 'overworld' },
@@ -64,17 +61,12 @@ export const OVERWORLD_POOL = [
   { id: 'dirt',          name: 'Dirt',          texture: 'dirt.png',          pool: 'overworld' },
   { id: 'coarse_dirt',   name: 'Coarse Dirt',   texture: 'coarse_dirt.png',   pool: 'overworld' },
   { id: 'rooted_dirt',   name: 'Rooted Dirt',   texture: 'rooted_dirt.png',   pool: 'overworld' },
-  { id: 'grass_block',   name: 'Grass Block',   texture: 'grass_block_top.png', pool: 'overworld' },
-  { id: 'podzol',        name: 'Podzol',        texture: 'podzol_top.png',    pool: 'overworld' },
-  { id: 'mycelium',      name: 'Mycelium',      texture: 'mycelium_top.png',  pool: 'overworld' },
   { id: 'mud',           name: 'Mud',           texture: 'mud.png',           pool: 'overworld' },
   { id: 'packed_mud',    name: 'Packed Mud',    texture: 'packed_mud.png',    pool: 'overworld' },
   { id: 'mud_bricks',    name: 'Mud Bricks',    texture: 'mud_bricks.png',    pool: 'overworld' },
   { id: 'mud_brick_slab',    name: 'Mud Brick Slab',    texture: 'mud_bricks.png', pool: 'overworld' },
   { id: 'mud_brick_stairs',  name: 'Mud Brick Stairs',  texture: 'mud_bricks.png', pool: 'overworld' },
   { id: 'mud_brick_wall',    name: 'Mud Brick Wall',    texture: 'mud_bricks.png', pool: 'overworld' },
-  { id: 'farmland',      name: 'Farmland',      texture: 'farmland.png',      pool: 'overworld' },
-  { id: 'dirt_path',     name: 'Dirt Path',     texture: 'dirt_path_top.png', pool: 'overworld' },
 
   // --- Sand family ---
   { id: 'sand',                    name: 'Sand',                    texture: 'sand.png',                    pool: 'overworld' },
@@ -191,24 +183,6 @@ export const OVERWORLD_POOL = [
   { id: 'stripped_bamboo_block', name: 'Stripped Bamboo Block', texture: 'stripped_bamboo_block.png', pool: 'overworld' },
   { id: 'bamboo_planks',         name: 'Bamboo Planks',         texture: 'bamboo_planks.png',     pool: 'overworld' },
   { id: 'bamboo_mosaic',         name: 'Bamboo Mosaic',         texture: 'bamboo_mosaic.png',     pool: 'overworld' },
-
-  // --- Overworld ores ---
-  { id: 'coal_ore',              name: 'Coal Ore',              texture: 'coal_ore.png',              pool: 'overworld' },
-  { id: 'iron_ore',              name: 'Iron Ore',              texture: 'iron_ore.png',              pool: 'overworld' },
-  { id: 'gold_ore',              name: 'Gold Ore',              texture: 'gold_ore.png',              pool: 'overworld' },
-  { id: 'diamond_ore',           name: 'Diamond Ore',           texture: 'diamond_ore.png',           pool: 'overworld' },
-  { id: 'emerald_ore',           name: 'Emerald Ore',           texture: 'emerald_ore.png',           pool: 'overworld' },
-  { id: 'lapis_ore',             name: 'Lapis Ore',             texture: 'lapis_ore.png',             pool: 'overworld' },
-  { id: 'redstone_ore',          name: 'Redstone Ore',          texture: 'redstone_ore.png',          pool: 'overworld' },
-  { id: 'copper_ore',            name: 'Copper Ore',            texture: 'copper_ore.png',            pool: 'overworld' },
-  { id: 'deepslate_coal_ore',    name: 'Deepslate Coal Ore',    texture: 'deepslate_coal_ore.png',    pool: 'overworld' },
-  { id: 'deepslate_iron_ore',    name: 'Deepslate Iron Ore',    texture: 'deepslate_iron_ore.png',    pool: 'overworld' },
-  { id: 'deepslate_gold_ore',    name: 'Deepslate Gold Ore',    texture: 'deepslate_gold_ore.png',    pool: 'overworld' },
-  { id: 'deepslate_diamond_ore', name: 'Deepslate Diamond Ore', texture: 'deepslate_diamond_ore.png', pool: 'overworld' },
-  { id: 'deepslate_emerald_ore', name: 'Deepslate Emerald Ore', texture: 'deepslate_emerald_ore.png', pool: 'overworld' },
-  { id: 'deepslate_lapis_ore',   name: 'Deepslate Lapis Ore',   texture: 'deepslate_lapis_ore.png',   pool: 'overworld' },
-  { id: 'deepslate_redstone_ore',name: 'Deepslate Redstone Ore',texture: 'deepslate_redstone_ore.png',pool: 'overworld' },
-  { id: 'deepslate_copper_ore',  name: 'Deepslate Copper Ore',  texture: 'deepslate_copper_ore.png',  pool: 'overworld' },
 
   // --- Metal / mineral blocks ---
   { id: 'iron_block',     name: 'Iron Block',     texture: 'iron_block.png',     pool: 'overworld' },
@@ -364,9 +338,6 @@ export const OVERWORLD_POOL = [
   { id: 'dark_prismarine_stairs',  name: 'Dark Prismarine Stairs',  texture: 'dark_prismarine.png',         pool: 'overworld' },
 
   // --- Ice / snow ---
-  { id: 'ice',        name: 'Ice',        texture: 'ice.png',        pool: 'overworld' },
-  { id: 'packed_ice', name: 'Packed Ice', texture: 'packed_ice.png', pool: 'overworld' },
-  { id: 'blue_ice',   name: 'Blue Ice',   texture: 'blue_ice.png',   pool: 'overworld' },
   { id: 'snow_block', name: 'Snow Block', texture: 'snow.png',       pool: 'overworld' },
 
   // --- Nature / plants ---
@@ -379,20 +350,8 @@ export const OVERWORLD_POOL = [
   { id: 'flowering_azalea',   name: 'Flowering Azalea',   texture: 'flowering_azalea_top.png', pool: 'overworld' },
   { id: 'spore_blossom',      name: 'Spore Blossom',      texture: 'spore_blossom.png',        pool: 'overworld' },
   { id: 'dripstone_block',    name: 'Dripstone Block',    texture: 'dripstone_block.png',      pool: 'overworld' },
-  { id: 'sculk',              name: 'Sculk',              texture: 'sculk.png',                pool: 'overworld' },
-  { id: 'sculk_catalyst',     name: 'Sculk Catalyst',     texture: 'sculk_catalyst_top.png',pool: 'overworld' },
-  { id: 'sculk_sensor',       name: 'Sculk Sensor',       texture: 'sculk_sensor_top.png',  pool: 'overworld' },
-  { id: 'sculk_shrieker',     name: 'Sculk Shrieker',     texture: 'sculk_shrieker_top.png',pool: 'overworld' },
   { id: 'amethyst_block',     name: 'Amethyst Block',     texture: 'amethyst_block.png',       pool: 'overworld' },
-  { id: 'budding_amethyst',   name: 'Budding Amethyst',   texture: 'budding_amethyst.png',     pool: 'overworld' },
   { id: 'dried_kelp_block',   name: 'Dried Kelp Block',   texture: 'dried_kelp_side.png',      pool: 'overworld' },
-  { id: 'sponge',             name: 'Sponge',             texture: 'sponge.png',               pool: 'overworld' },
-  { id: 'wet_sponge',         name: 'Wet Sponge',         texture: 'wet_sponge.png',           pool: 'overworld' },
-
-  // --- Mushrooms ---
-  { id: 'red_mushroom_block',   name: 'Red Mushroom Block',   texture: 'red_mushroom_block.png',   pool: 'overworld' },
-  { id: 'brown_mushroom_block', name: 'Brown Mushroom Block', texture: 'brown_mushroom_block.png', pool: 'overworld' },
-  { id: 'mushroom_stem',        name: 'Mushroom Stem',        texture: 'mushroom_stem.png',        pool: 'overworld' },
 
   // --- Crops / food blocks ---
   { id: 'melon',          name: 'Melon',          texture: 'melon_side.png',     pool: 'overworld' },
@@ -423,7 +382,6 @@ export const OVERWORLD_POOL = [
   { id: 'piston',            name: 'Piston',            texture: 'piston_top.png',        pool: 'overworld' },
   { id: 'sticky_piston',     name: 'Sticky Piston',     texture: 'piston_top_sticky.png',        pool: 'overworld' },
   { id: 'hopper',            name: 'Hopper',            texture: 'hopper_top.png',               pool: 'overworld' },
-  { id: 'beacon',            name: 'Beacon',            texture: 'beacon.png',                   pool: 'overworld' },
   { id: 'redstone_lamp',     name: 'Redstone Lamp',     texture: 'redstone_lamp.png',            pool: 'overworld' },
   { id: 'target',            name: 'Target',            texture: 'target_top.png',               pool: 'overworld' },
   { id: 'cartography_table', name: 'Cartography Table', texture: 'cartography_table_top.png',    pool: 'overworld' },
@@ -438,17 +396,6 @@ export const OVERWORLD_POOL = [
   { id: 'slime_block',   name: 'Slime Block',   texture: 'slime_block.png',    pool: 'overworld' },
   { id: 'clay',          name: 'Clay',          texture: 'clay.png',           pool: 'overworld' },
   { id: 'lodestone',     name: 'Lodestone',     texture: 'lodestone_top.png',  pool: 'overworld' },
-  { id: 'purpur_block',  name: 'Purpur Block',  texture: 'purpur_block.png',   pool: 'overworld' },
-  { id: 'purpur_pillar', name: 'Purpur Pillar', texture: 'purpur_pillar.png',  pool: 'overworld' },
-  { id: 'purpur_slab',   name: 'Purpur Slab',   texture: 'purpur_block.png',   pool: 'overworld' },
-  { id: 'purpur_stairs', name: 'Purpur Stairs', texture: 'purpur_block.png',   pool: 'overworld' },
-  { id: 'end_stone',     name: 'End Stone',     texture: 'end_stone.png',      pool: 'overworld' },
-  { id: 'end_stone_bricks',       name: 'End Stone Bricks',       texture: 'end_stone_bricks.png', pool: 'overworld' },
-  { id: 'end_stone_brick_slab',   name: 'End Stone Brick Slab',   texture: 'end_stone_bricks.png', pool: 'overworld' },
-  { id: 'end_stone_brick_stairs', name: 'End Stone Brick Stairs', texture: 'end_stone_bricks.png', pool: 'overworld' },
-  { id: 'end_stone_brick_wall',   name: 'End Stone Brick Wall',   texture: 'end_stone_bricks.png', pool: 'overworld' },
-  { id: 'suspicious_sand',        name: 'Suspicious Sand',        texture: 'suspicious_sand_0.png',pool: 'overworld' },
-  { id: 'suspicious_gravel',      name: 'Suspicious Gravel',      texture: 'suspicious_gravel_0.png', pool: 'overworld' },
 ]
 
 export const NETHER_POOL = [
@@ -458,7 +405,6 @@ export const NETHER_POOL = [
   { id: 'soul_soil',      name: 'Soul Soil',      texture: 'soul_soil.png',      pool: 'nether' },
   { id: 'glowstone',      name: 'Glowstone',      texture: 'glowstone.png',      pool: 'nether' },
   { id: 'magma_block',    name: 'Magma Block',    texture: 'magma.png',          pool: 'nether' },
-  { id: 'ancient_debris', name: 'Ancient Debris', texture: 'ancient_debris_top.png', pool: 'nether' },
   { id: 'crying_obsidian',name: 'Crying Obsidian',texture: 'crying_obsidian.png', pool: 'nether' },
   { id: 'shroomlight',    name: 'Shroomlight',    texture: 'shroomlight.png',    pool: 'nether' },
 
@@ -525,12 +471,7 @@ export const NETHER_POOL = [
   { id: 'crimson_roots',    name: 'Crimson Roots',    texture: 'crimson_roots.png',    pool: 'nether' },
   { id: 'warped_roots',     name: 'Warped Roots',     texture: 'warped_roots.png',     pool: 'nether' },
 
-  // --- Nether ores ---
-  { id: 'nether_quartz_ore', name: 'Nether Quartz Ore', texture: 'nether_quartz_ore.png', pool: 'nether' },
-  { id: 'nether_gold_ore',   name: 'Nether Gold Ore',   texture: 'nether_gold_ore.png',   pool: 'nether' },
-
   // --- Crafted nether blocks ---
-  { id: 'netherite_block',    name: 'Netherite Block',    texture: 'netherite_block.png',    pool: 'nether' },
   { id: 'quartz_block',       name: 'Quartz Block',       texture: 'quartz_block_side.png',  pool: 'nether' },
   { id: 'smooth_quartz_block',name: 'Smooth Quartz Block',texture: 'quartz_block_bottom.png',      pool: 'nether' },
   { id: 'quartz_bricks',      name: 'Quartz Bricks',      texture: 'quartz_bricks.png',      pool: 'nether' },
