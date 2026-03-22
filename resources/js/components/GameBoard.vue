@@ -9,7 +9,7 @@
         :key="item.id"
         :item="item"
         :checked="checkedIds.has(item.id)"
-        @toggle="$emit('toggle', item.id)"
+        @toggle="$emit('toggle', $event)"
       />
     </div>
 
