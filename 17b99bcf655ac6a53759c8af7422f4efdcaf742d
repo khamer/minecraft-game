@@ -1,0 +1,23 @@
+resources/js/data/materials.js
+  edcf5e7f357463d5 49,83,90,125,127,133,135,141,143,149,151,157,159,165,167,173,175,183,185,190-191,409-411,414,420-421,423,503-504,513-514,535,538,541-542
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15",
+  "base_commit_sha": "17b99bcf655ac6a53759c8af7422f4efdcaf742d",
+  "prompts": {
+    "edcf5e7f357463d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ea67ce87-443a-407f-97a0-680be35d398c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Kevin Hamer <kevin@imarc.com>",
+      "messages": [],
+      "total_additions": 36,
+      "total_deletions": 37,
+      "accepted_lines": 36,
+      "overriden_lines": 0
+    }
+  }
+}
