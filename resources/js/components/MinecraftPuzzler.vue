@@ -2,7 +2,7 @@
 <template>
   <div class="puzzler-wrap">
     <div class="puzzler-panel">
-      <div class="puzzler-title">PUZZLER</div>
+      <div class="puzzler-title">SCAVENGER HUNT</div>
 
       <!-- Game board -->
       <!-- v-if guard ensures GameBoard only receives numeric stage values (1|2|3) -->
